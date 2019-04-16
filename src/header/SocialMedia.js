@@ -4,7 +4,6 @@ import insIcon from '../img/svg/instagram.svg';
 import twiIcon from '../img/svg/twiter.svg';
 
 class SocialMedia extends Component {
-    
     render() {
         return (
             <div className='social-media'>
@@ -17,10 +16,7 @@ class SocialMedia extends Component {
                 <button className='btn-social-media'>
                     <img src={twiIcon} />
                 </button>
-
-                
             </div>
-
         );
     }
 }
