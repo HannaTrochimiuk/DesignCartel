@@ -1,0 +1,22 @@
+.contact{
+    width: 100%;
+    height: 40rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.contact-logo{
+    width: 30%;
+    height: 100%;
+    background-image: url('../img/logoSqr.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.contact-text{
+   padding: 4rem;
+    width: 30%;
+    &--right{
+        text-align: right;
+    }
+}
