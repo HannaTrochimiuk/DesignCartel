@@ -1,9 +1,12 @@
 .header{
-   background-image: linear-gradient(
-    to right bottom,
-    rgba($color-yellow, 0.3),
-    rgba($color-brown, 0.3)),
-    url(../img/hero.jpg);
+//    background-image: linear-gradient(
+//     to right bottom,
+//     rgba($color-yellow, 0.3),
+//     rgba($color-brown, 0.3)),
+//     url(../img/room.jpg);
+
+    background-image: url(../img/room-bw.jpg);
+    
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -13,11 +16,16 @@
 
 
 .text-box{
+    // background-image: url(../img/triangle.jpg);
+    // background-position: left;
+    // background-size: 70%;
+    border: 4px solid $color-yellow;
+    color:$color-yellow;
     padding: 2rem;
-    background-color: rgba($color-white, .6);
+    background-color: rgba(black, .6);
     position: absolute;
     left: 3rem;
-    bottom: 3rem;
+    bottom: 6rem;
     width: 40%; 
     border-radius: 2px;
     font-size: 3rem;
