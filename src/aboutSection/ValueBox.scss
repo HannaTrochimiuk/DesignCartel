@@ -3,45 +3,96 @@
     height: 15rem;
     position: relative;
     perspective: 150rem;
-    
+  padding: 1rem;
     
 
+
+    
+    
     &__side{
-        box-shadow: 0 1rem 1rem rgba(black,.3);
+  
+        box-shadow: 0 1rem 1rem rgba(black,.2);
         height: 15rem;
         width: 15rem;
         border-radius: 50%;
-        transition: all .8s ease;
+        transition: all .6s ease;
         position: absolute;
         top:0;
         left: 0;
         backface-visibility: hidden;
         overflow: hidden;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+       
+       
         
 
         &--front{
             background-color: $color-yellow;
+            z-index: 1000;
+            color: $color-white;
         }
 
         &--back{
-            border: 1px solid $color-brown;
+            background-color: $color-brown;
             transform: rotateY(180deg);
+            color: $color-white;
+            font-size: 2rem;
         }
     }
 
-    &:hover &__side--front{
-        transform: rotateY(-180deg);
-    }
+  
 
-    &:hover &__side--back{
-        transform: rotateY(0deg);
-    }
+    // &:hover &__side--front{
+    //     transform:  rotateY(-180deg);
+    // }
+
+    // &:hover &__side--back{
+    //     transform:  rotateY(0deg);
+       
+
+        
+    // }
+
 }
-.value-name{
-    padding: 1.5rem 2.5rem;
-    font-size: 1.5rem;
-    font-weight: 400;
+
+.value-box-active .value-box__side--front{
+    
+    transform:  rotateY(-180deg);
+
 }
+.value-box-active .value-box__side--back{
+    transform:  rotateY(0deg);
+    
+}
+
+// wersja 2//////////////////////////////////////////////////////////////////////////
+
+
+// .value-box{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         background-color: $color-yellow;
+//         width: 20rem;
+//         height: 20rem;
+//         border-radius: 100%;
+//         transition: all .3s;
+//         box-shadow: 0  1rem 1rem rgba(black,.2); 
+
+
+
+     
+//         &:hover ~ .value-frame{
+//             animation: transparent 1s;
+//         }
+// }
+// .value-title{
+//     padding-top: 1rem;
+//     color: $color-white;
+    
+// }
+
+

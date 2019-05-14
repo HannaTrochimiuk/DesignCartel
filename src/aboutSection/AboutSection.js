@@ -4,11 +4,11 @@ import Values from './Values';
 class AboutSection extends Component {
     render() {
         return(
-            <section className='about-section'>
+            <section className='about-section' id='about-section'>
                 <div className='title-box'>
                     <h1 className='title'>o nas</h1>
                 </div>
-                <div className='about-text'>Lorem ipsum dolor sit amet magna. Aliquam erat in neque tellus, elementum vitae, placerat vehicula vitae, fringilla sed, viverra auctor, sapien massa ut malesuada quis, wisi. Phasellus nec leo. Donec lectus rhoncus eget, bibendum dui. Vivamus eget risus. Phasellus dui imperdiet vel, sapien. Praesent dolor. Duis vulputate nunc. Etiam eu odio. Donec tempus vehicula, dui aliquam cursus sapien. Donec suscipit sit amet, vulputate et, commodo ligula turpis, rutrum pede sit amet leo felis fermentum erat. Nullam et libero. Vivamus fermentum augue. Maecenas diam eu tortor quis consectetuer elit. Mauris vitae ultrices posuere cubilia Curae, Duis vehicula libero posuere mattis vel, ornare tellus</div>
+                <div className='about-text'>Design Cartel to grupa ludzi kochających wnętrza i dobry design. Od kilku lat skupiliśmy się na wnętrzach komercyjnych i z radością otwieramy każdy nowy projekt. Współpracujemy z inwestorem, architektem lub projektantem i wspólnie dobieramy do projektu elementy, materiały, znajdujemy rozwiązania. Wszyscy jesteśmy naprawdę otwarci i, co nie jest zbyt częste, po prostu lubimy ludzi. Praca nad projektem ma być efektywna, sprawna, ale w uczciwej, pozytywnej atmosferze pełnej zrozumienia i uwagi. I to, już na starcie dajemy od siebie każdemu naszemu Klientowi. Gwarancję uczciwości i profesjonalizmu z uśmiechem na ustach. Zapraszamy do wspólnego działania.</div>
                 <Values />
             </section>
         )

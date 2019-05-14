@@ -7,10 +7,12 @@ import ProjectsSection from './projectsSection/ProjectsSection';
 import Contact from './contact/Contact';
 
 
+
 class App extends Component {
     render() {
         return (
             <div>
+                
                 <NavigationBar/>
                 <Header/>
                 <AboutSection/>

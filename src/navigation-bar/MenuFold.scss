@@ -1,0 +1,60 @@
+.menu-fold-box{
+    display: none;
+    
+    
+
+    @media only screen and (max-width:800px){
+        display: inline-block;
+    }
+
+    
+}
+
+.menu-fold{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(white,.8);
+    position: fixed;
+    top: 7rem;
+    right: 0;
+    animation: goDown 1s;
+}
+
+@keyframes goDown{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.menu-fold-btn{
+    position: fixed;
+    top:1rem;
+    right: 1rem;
+    display: inline-block;
+    border: none;
+    background-image: url(../img/triangle.jpg);
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(black, .2);
+
+   
+}
+
+// .menu-fold-background{
+//     position: fixed;
+//     top:1.3rem;
+//     right: 1.3rem;
+//     width: 4rem;
+//     height: 4rem;
+//     background-image: radial-gradient($color-yellow, $color-brown);
+//     border-radius: 100%;
+//     z-index: -1;
+//     transform: scale(12);
+// }

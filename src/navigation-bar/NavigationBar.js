@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './Logo';
 import Menu from './Menu';
+import MenuFold from './MenuFold';
 
 class NavigationBar extends Component {
     render(){
@@ -8,6 +9,7 @@ class NavigationBar extends Component {
             <div className = "navigation-bar">
                 <Logo/>  
                 <Menu/>
+                <MenuFold />
             </div>
         );
     }

@@ -6,14 +6,23 @@
 //     url(../img/room.jpg);
 
     background-image: url(../img/room-bw.jpg);
-    
+    filter: brightness(.9);
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-position: top;
-    position: relative;    
+    background-position: center;
+    position: relative;  
+    transition: all .2s;  
 }
 
+.header:hover{
+    background-image: url(../img/room.jpg);
+}
+
+.header::after{
+    content:  url(../img/room.jpg);
+    display: none;
+}
 
 .text-box{
     // background-image: url(../img/triangle.jpg);
@@ -22,7 +31,7 @@
     border: 4px solid $color-yellow;
     color:$color-yellow;
     padding: 2rem;
-    background-color: rgba(black, .6);
+    background-color: rgba(black, .5);
     position: absolute;
     left: 3rem;
     bottom: 6rem;
@@ -30,4 +39,11 @@
     border-radius: 2px;
     font-size: 3rem;
     line-height: 1.5;
+   
 }
+
+// .text-box:hover{
+//     background-color: rgba(white, .8);
+   
+    
+// }

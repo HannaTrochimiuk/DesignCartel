@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-     padding: 4rem;
+     padding: 5px 4rem;
      text-align: center;
 }
 
@@ -17,7 +17,7 @@
 .service-foto{
    
     width: 50%;
-    height:30rem;
+    height:35rem;
     background-size: cover;
 
     &--1{
@@ -54,4 +54,5 @@
 
 .service-text{
     padding: 0 2rem;
+    font-size: 1.5rem;
 }

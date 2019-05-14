@@ -5,12 +5,13 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "react-transition-group": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "watch:sass": "node-sass src/common/main.scss src/css/style.css -w"    
+    "watch:sass": "node-sass src/common/main.scss src/css/style.css -w"
   },
   "eslintConfig": {
     "extends": "react-app"

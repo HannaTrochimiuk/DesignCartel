@@ -1,35 +1,27 @@
+
 .btn-menu{
     border: none;
     background-color: $color-white;
     position: relative;
-    width: 13rem;  
-    
-    &__link{
-        &:link,
-        &:visited{
-            font-size: 2rem;
-            font-family: "Montserrat";
-            text-decoration: none;
-            color: $color-grey-1;
-            font-weight: 300;
-            z-index: 10000;
-            position: relative;
-            transition: all .2s .2s;
-        }
+    width: 13rem;
+    padding: 1rem;
+
+    @media only screen and (max-width:800px){
+        background-color: transparent;
     }
     
-    &:hover{
 
-        & .btn-menu__link{
+   
+ 
+    &:hover{
+        & .btn-menu-text{
             color: white;
         }
-        &:before{
+        &:before {
             transform: scaleX(1);
-            height: 100%;
-            
+            height: 100%;       
         }
     }
-
     &::before{
         content: '';
         position: absolute;
@@ -40,8 +32,28 @@
         background-color: $color-yellow;
         transform: scaleX(0);
         transition: transform .2s,
-                    height .4s cubic-bezier(1,0,0,1) .2s,
-                    background-color .1s;
+        height .4s cubic-bezier(1,0,0,1) .2s,
+        background-color .1s;
     }
+                
+    &:focus{
+        outline: none;
+    }
+                
+}
 
+
+.btn-menu-text{
+    font-size: 2rem;
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: $color-grey-1;
+    font-weight: 300;
+    z-index: 10000;
+    position: relative;
+    transition: all .2s .2s;
+ 
+   
+
+   
 }

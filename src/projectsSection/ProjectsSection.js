@@ -11,6 +11,7 @@ class ProjectsSection extends Component {
                     <div className="project-box">
                         <div className="project-foto project-foto--1">&nbsp;</div>
                         <div className="project-text">Lorem ipsum</div>
+                        <div className="project-text-small">Lorem ipsum lorem ipsum</div>
                     </div>
                     <div className="project-box">
                         <div className="project-foto project-foto--2">&nbsp;</div>
@@ -19,6 +20,7 @@ class ProjectsSection extends Component {
                     <div className="project-box">
                         <div className="project-foto project-foto--3">&nbsp;</div>
                         <div className="project-text">Lorem ipsum</div>
+                        
                     </div>
                     <div className="project-box">
                         <div className="project-foto project-foto--3">&nbsp;</div>
