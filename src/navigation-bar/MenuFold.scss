@@ -1,10 +1,9 @@
 .menu-fold-box{
     display: none;
     
-    
-
     @media only screen and (max-width:800px){
-        display: inline-block;
+        display: flex;
+        
     }
 
     
@@ -13,36 +12,40 @@
 .menu-fold{
     display: flex;
     flex-direction: column;
-    background-color: rgba(white,.8);
+    background-color: rgba(white,1);
     position: fixed;
-    top: 7rem;
+    top: 8rem;
     right: 0;
-    animation: goDown 1s;
+    // animation: goDown .5s;
+    box-shadow: 0 1rem 2rem rgba(black,.2);
+    // z-index: -10;
+
+    transition: height 500ms 0ms, opacity 500ms 500ms;
 }
 
 @keyframes goDown{
     0%{
-        opacity: 0;
+        transform: translateX(20rem);
     }
     100%{
-        opacity: 1;
+        transform: translateX(0);
     }
 }
 
 .menu-fold-btn{
-    position: fixed;
-    top:1rem;
-    right: 1rem;
-    display: inline-block;
+    // top:1rem;
+    // right: 1rem;
+    // display: inline-block;
+    // height: 100%;
     border: none;
-    background-image: url(../img/triangle.jpg);
-    background-size: cover;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
-    outline: none;
-    overflow: hidden;
-    box-shadow: 0 1rem 2rem rgba(black, .2);
+    background-color: $color-yellow;
+   outline: none;
+    font-family: inherit;
+    // padding: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    width: 10rem;
+
 
    
 }

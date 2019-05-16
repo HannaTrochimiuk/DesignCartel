@@ -31,7 +31,7 @@ class ManuFold extends Component {
         return (
             <div className="menu-fold-box">
                 <button className="menu-fold-btn" onClick={this.showMenu}>
-
+                    menu
                 </button>
                 {/* <div className="menu-fold-background">a</div> */}
 

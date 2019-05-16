@@ -7,9 +7,9 @@ class Logo extends Component {
     render() {
         return(
 
-            <div className='logo-box'>
+            // <div className='logo-box'>
                 <img src={logo} className='logo-nav-bar' alt='error'/>
-            </div>
+            // {/* </div> */}
             // <div class='logo-temp'>
             //     <img src={logotemp} className='logo-tempo-logo' alt='error'/>
             // </div>

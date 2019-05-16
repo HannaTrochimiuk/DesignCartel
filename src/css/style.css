@@ -17,11 +17,12 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .logo-box {
-  width: 15%; }
+  height: 100%;
+  padding: 1rem; }
 
 .logo-nav-bar {
-  width: 100%;
-  padding: 1.5rem 2rem; }
+  height: 5rem;
+  padding: 1rem 2rem; }
 
 .navigation-bar {
   background-color: #fff;
@@ -45,37 +46,32 @@ body {
   display: none; }
   @media only screen and (max-width: 800px) {
     .menu-fold-box {
-      display: inline-block; } }
+      display: flex; } }
 
 .menu-fold {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   position: fixed;
-  top: 7rem;
+  top: 8rem;
   right: 0;
-  animation: goDown 1s; }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: height 500ms 0ms, opacity 500ms 500ms; }
 
 @keyframes goDown {
   0% {
-    opacity: 0; }
+    transform: translateX(20rem); }
   100% {
-    opacity: 1; } }
+    transform: translateX(0); } }
 
 .menu-fold-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  display: inline-block;
   border: none;
-  background-image: url(../img/triangle.jpg);
-  background-size: cover;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 100%;
+  background-color: #c89d66;
   outline: none;
-  overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: white;
+  width: 10rem; }
 
 .btn-menu {
   border: none;

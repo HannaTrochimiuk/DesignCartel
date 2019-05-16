@@ -31,6 +31,17 @@ class Values extends Component {
         }
     }
 
+    clearActiveBox = () => {
+        setTimeout(() => {
+            document.querySelector('.value-text--0').classList.add('display-none');
+            document.querySelector('.value-text--1').classList.add('display-none');
+            document.querySelector('.value-text--2').classList.add('display-none');
+            document.querySelector('.value-text--3').classList.add('display-none');
+            document.querySelector('.value-frame').classList.add('height-none');
+        }, 280);
+        this.setState({activeBox:null}, () => {console.log(this.state)});
+    }
+
     setActiveBox = (activeBox) => {
         var deactivatedText = document.querySelector('.value-text--' + this.state.activeBox);
         document.querySelector('.value-frame').classList.remove('height-none');
@@ -57,7 +68,8 @@ class Values extends Component {
 
     render() {
         return (
-            <div>
+            <div className='values-box'
+                onMouseLeave={() => this.clearActiveBox()}>
                 <div className="values">
                     <ValueBox
                         className={this.state.activeBox == 0 ? 'value-box value-box-active' : 'value-box'}
