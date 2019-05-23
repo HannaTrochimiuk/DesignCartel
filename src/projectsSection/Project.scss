@@ -1,0 +1,44 @@
+.project-box{
+    border: none;
+    outline: none;
+    width: 33.3333%;
+    height: 35rem;
+    position: relative;
+    overflow: hidden;    
+}
+
+.project-box:hover  .project-foto{
+    filter: grayscale(10%) brightness(.9);
+    transform: scale(1.1);
+}
+
+.project-foto{
+    background-size: cover;
+   height: 100%;
+   transition: all .5s;
+   filter:  grayscale(70%) brightness(.7);
+   &--1{
+        background-image: url('../img/room.jpg');
+        
+   }
+   &--2{
+        background-image: url('../img/foto-2.jpg');
+    }
+    &--3{
+        background-image: url('../img/foto-3.jpg');
+    }
+}
+.project-text{
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: $color-white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+   
+    
+}

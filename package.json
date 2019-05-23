@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
+    "react-bnb-gallery": "^1.1.5",
     "react-dom": "^16.8.6",
     "react-scripts": "^2.1.8",
     "react-transition-group": "^4.0.0"
@@ -23,7 +24,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "react-alice-carousel": "^1.13.11"
   },
   "homepage": "."
 }
