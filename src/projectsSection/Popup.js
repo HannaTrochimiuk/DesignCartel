@@ -7,7 +7,10 @@ import foto5 from '../img/foto-3.jpg';
 
 import next from '../img/svg/next.svg';
 import back from '../img/svg/back.svg';
-// import AliceCarousel from 'react-alice-carousel';
+
+import "../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from 'react-image-gallery';
+
 
 const photos = [{
     photo: foto1,
@@ -30,7 +33,11 @@ const photos = [{
 class Popup extends Component {
     constructor() {
         super();
-        this.state = { number: 0 };
+        this.state = {
+            number: 0,
+            galleryItems: photos.map(photo => <img src={photo.photo} key={photo.index} className="card-foto" />)
+            // galleryItems: [1, 2, 3].map((i) => (<h2 key={i}>{i}</h2>))
+        };
     }
 
     nextFoto = () => {
@@ -55,91 +62,74 @@ class Popup extends Component {
     }
 
     render() {
+        const images = [
+            {
+                original: 'http://lorempixel.com/1000/600/nature/1/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/2/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/2/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/3/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/3/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/1/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/2/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/2/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/3/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/3/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/1/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/2/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/2/',
+                originalClass: "card-foto"
+            },
+            {
+                original: 'http://lorempixel.com/1000/600/nature/3/',
+                thumbnail: 'http://lorempixel.com/250/150/nature/3/',
+                originalClass: "card-foto"
+            }
+        ]
         return (
             <div className="popup popup--1 popup-hide">
                 <div className='popup-content'>
                     <div className='popup-left'>
-                        <div className='gallery-top'>
-                            <img src={photos[this.state.number].photo} alt='arr' className='foto-main' />
-                            <button className='arrow-btn arrow-btn--prev' onClick={() => this.prevFoto()}>
-                                <img src={back} />
-                            </button>
-                            <button className='arrow-btn arrow-btn--next' onClick={() => this.nextFoto()}>
-                                <img src={next} />
-                            </button>
-                        </div>
-                        <div className='gallery-bottom'>
-                            <div className='gallery-wrapper' style={{
-                                'transform': `translateX(-${photos[this.state.number].index * (100 / photos.length)}%)`
-                            }}>
-
-                                {/* <AliceCarousel> */}
-                                {
-                                    photos.map(photo =>
-
-                                        <img src={photo.photo} alt='error' className='card-foto' />
-                                    )
-                                }
-                                {/* </AliceCarousel> */}
-                            </div>
-
-                        </div>
+                        <ImageGallery 
+                        items={images} 
+                        showFullscreenButton={false}/>
                     </div>
                     <div className='popup-right'>
-                        <button className='popup-exit' onClick={() => this.hidePopup(1)}>x</button>
                         <div className='popup-information'>
                             <div className='popup-information--title'>
-                                Lorem ipsum
-                                        </div>
+                                Lorem Ipsum
+                            </div>
                             <div className='popup-information--text'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                        </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl enim, placerat in lobortis aliquet, placerat in mi. Nunc quis libero imperdiet, pellentesque odio quis, faucibus ex. Suspendisse potenti. Phasellus ligula ipsum, rhoncus non justo nec, facilisis tempus velit. Morbi ut elit luctus quam porta imperdiet in vitae magna. Sed condimentum dapibus velit non venenatis. Nam non lectus volutpat, interdum nibh non, dapibus mi. Proin rutrum nisl sed libero commodo scelerisque. Quisque in ultrices dui, vel sollicitudin magna. Vestibulum placerat accumsan leo vitae iaculis. 
+                            </div>
                         </div>
+                        <button className="popup-exit" onClick={() => this.hidePopup(1)}>x </button>
                     </div>
                 </div>
-            </div >
-
-            // <div className='popup popup--1 popup-hide'>
-            //     <div className='popup-content'>
-            //         <div className='popup-left'>
-            //             <div className='gallery-top'>
-            //                 <img src={photos[this.state.number].photo} alt='foto-main' className='foto-main' />
-            //                 <button className='arrow-btn arrow-btn--prev' onClick={() => this.prevFoto()}>
-            //                     <img src={back} />
-            //                 </button>
-            //                 <button className='arrow-btn arrow-btn--next' onClick={() => this.nextFoto()}>
-            //                     <img src={next} />
-            //                 </button>
-            //             </div>
-            //             <div className='gallery-bottom'>
-            //                 <div className={`cards-slider active-slide-${photos[this.state.number].index}`}>
-            //                     <div className='cards-slider-wrapper' style={{
-            //                         'transform': `translateX(-${photos[this.state.number].index * (100 / photos.length)}%)`
-            //                     }}>
-            //                         {
-            //                             photos.map(photo =>
-            //                                 <div className='card'>
-            //                                     <img src={photo.photo} alt='error' className='card-foto' />
-            //                                 </div>)
-            //                         }
-            //                     </div>
-
-            //                 </div>
-            //             </div>
-            //         </div>
-            //         <div className='popup-right'>
-            //             <button className='popup-exit' onClick={() => this.hidePopup(1)}>x</button>
-            //             <div className='popup-information'>
-            //                 <div className='popup-information--title'>
-            //                     Lorem ipsum
-            //                              </div>
-            //                 <div className='popup-information--text'>
-            //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            //                            </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div>
+            </div>
         )
     };
 }

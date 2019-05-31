@@ -39,7 +39,7 @@ class Values extends Component {
             document.querySelector('.value-text--3').classList.add('display-none');
             document.querySelector('.value-frame').classList.add('height-none');
         }, 280);
-        this.setState({activeBox:null}, () => {console.log(this.state)});
+        this.setState({ activeBox: null }, () => { console.log(this.state) });
     }
 
     setActiveBox = (activeBox) => {
@@ -51,7 +51,7 @@ class Values extends Component {
         }
         this.setState({
             activeBox: activeBox
-            
+
         }, () => {
             var activatedText = document.querySelector('.value-text--' + this.state.activeBox);
             setTimeout(() => {
@@ -60,7 +60,7 @@ class Values extends Component {
                 }
                 activatedText.classList.remove('fade-out');
                 activatedText.classList.remove('display-none');
-    
+
                 activatedText.classList.add('fade-in');
             }, 280);
         });
@@ -104,16 +104,32 @@ class Values extends Component {
                 <div className="line" /> */}
 
                 </div>
-               
+
                 <div className="value-frame height-none">
-                
-                    <div className='value-text value-text--0 display-none'>{this.case_0}</div>
-                    <div className='value-text value-text--1 display-none'>{this.case_1}</div>
-                    <div className='value-text value-text--2 display-none'>{this.case_2}</div>
-                    <div className='value-text value-text--3 display-none'>{this.case_3}</div>
+
+                    <div className='value-text value-text--0 display-none'>
+                        <div className='value-text-text'>
+                            {this.case_0}
+                        </div>
+                    </div>
+                    <div className='value-text value-text--1 display-none'>
+                        <div className='value-text-text'>
+                            {this.case_1}
+                        </div>
+                    </div>
+                    <div className='value-text value-text--2 display-none'>
+                        <div className='value-text-text'>
+                            {this.case_2}
+                        </div>
+                    </div>
+                    <div className='value-text value-text--3 display-none'>
+                        <div className='value-text-text'>
+                            {this.case_3}
+                        </div>
+                    </div>
                 </div>
-                
-               
+
+
             </div>
         )
     };

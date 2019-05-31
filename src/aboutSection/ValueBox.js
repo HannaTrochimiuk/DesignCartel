@@ -15,7 +15,7 @@ class ValueBox extends Component {
 
                 <div className="value-box__side value-box__side--front">
                     <div className="value-icon-white">
-                        <img src={this.props.iconWhite} />
+                        <img className='svg-size' src={this.props.iconWhite} />
                     </div>
                     
                 </div>   

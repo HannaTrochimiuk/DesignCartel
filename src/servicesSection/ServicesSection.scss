@@ -9,8 +9,9 @@
 .service{
     display: flex;
     width: 100%;
-    // padding: 2rem;
-    // border: 4px solid $color-yellow;
+    @media only screen and (max-width:890px){
+        flex-direction: column;
+    }
     
 }
 
@@ -19,6 +20,13 @@
     width: 50%;
     height:35rem;
     background-size: cover;
+    @media only screen and (max-width:990px){
+        height: 40rem;
+    }
+    @media only screen and (max-width:890px){
+        width: 100%;
+        height: 15rem;
+    }
 
     &--1{
         background-image: url('../img/foto-1.jpg');
@@ -30,6 +38,7 @@
     &--3{
         background-image: url('../img/foto-3.jpg');
     }
+
    
 }
 .service-text-box{
@@ -38,17 +47,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media only screen and (max-width:890px){
+        width: 100%;
+    }
 
     &--left{
         text-align: left;
     }
     &--right{
         text-align: right;
+        @media only screen and (max-width:890px){
+            order: 1;
+        }
     }
 }
 .service-title{
     font-size: 5rem;
     padding: 0 2rem;
+    @media only screen and (max-width:1060px){
+        font-size: 3.5rem;
+    }
     
 }
 

@@ -4,6 +4,13 @@
    align-items: center;
     padding: 4rem;
     text-align: center;
+
+    @media only screen and (max-width:650px){
+        padding: 2rem;
+    }
+    @media only screen and (max-width:450px){
+        padding: .6rem;
+    }
 }
 
 .title{
@@ -29,4 +36,8 @@
 .about-text{
     margin-bottom: 4rem;
     line-height: 1.4;
+
+    @media only screen and (max-width:450px){
+        font-size: 1.5rem;
+    }
 }

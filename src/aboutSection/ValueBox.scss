@@ -3,11 +3,30 @@
     height: 15rem;
     position: relative;
     perspective: 150rem;
-  padding: 1rem;
-    
+    padding-bottom: 2rem;
+    @media only screen and (max-width:670px){
+        width: 12rem;
+        height: 12rem;
+    }
 
-
-    
+    @media only screen and (max-width:540px){
+        width: 10rem;
+        height: 10rem;
+    }
+    @media only screen and (max-width:450px){
+        width: 9rem;
+        height:9rem;
+    }
+    @media only screen and (max-width:410px){
+        width: 8.5rem;
+        height:8.5rem;
+    }
+    @media only screen and (max-width:380px){
+        width: 7rem;
+        height:7rem;
+    }
+  
+   
     
     &__side{
   
@@ -25,7 +44,27 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+        @media only screen and (max-width:670px){
+            width: 12rem;
+            height: 12rem;
+        }
+        @media only screen and (max-width:540px){
+            width: 10rem;
+            height: 10rem;
+        }
+        @media only screen and (max-width:450px){
+            width: 9rem;
+            height:9rem;
+        }
+        @media only screen and (max-width:410px){
+            width: 8.5rem;
+            height:8.5rem;
+        }
+        @media only screen and (max-width:380px){
+            width: 7rem;
+            height:7rem;
+        }
+        
        
         
 
@@ -40,6 +79,15 @@
             transform: rotateY(180deg);
             color: $color-white;
             font-size: 2rem;
+            @media only screen and (max-width:670px){
+                font-size: 1.5rem;
+            }
+            @media only screen and (max-width:450px){
+                font-size: 1.2rem;
+            }
+            @media only screen and (max-width:380px){
+               font-size: 1rem;
+            }
         }
     }
 
@@ -94,5 +142,9 @@
 //     color: $color-white;
     
 // }
-
+.svg-size{
+    @media only screen and (max-width:450px){
+        height: 4rem;
+    }
+}
 
