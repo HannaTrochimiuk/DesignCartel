@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
 
 class MenuButton extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.scrollTo = this.scrollTo.bind(this)
     }
     scrollTo() {
-        console.log('abc');
-        
-        var element = document.querySelector('.'+this.props.id)
+        var element = document.querySelector('.' + this.props.id)
         var headerOffset = 45;
         var elementPosition = element.getBoundingClientRect().top;
         var offsetPosition = elementPosition - headerOffset + window.scrollY;
-        console.log(offsetPosition);
 
         window.scrollTo({
             top: offsetPosition,
             behavior: "smooth"
         });
-
     }
 
     render() {

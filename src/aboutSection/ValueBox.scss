@@ -91,19 +91,6 @@
         }
     }
 
-  
-
-    // &:hover &__side--front{
-    //     transform:  rotateY(-180deg);
-    // }
-
-    // &:hover &__side--back{
-    //     transform:  rotateY(0deg);
-       
-
-        
-    // }
-
 }
 
 .value-box-active .value-box__side--front{
@@ -116,33 +103,8 @@
     
 }
 
-// wersja 2//////////////////////////////////////////////////////////////////////////
-
-
-// .value-box{
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         background-color: $color-yellow;
-//         width: 20rem;
-//         height: 20rem;
-//         border-radius: 100%;
-//         transition: all .3s;
-//         box-shadow: 0  1rem 1rem rgba(black,.2); 
-
-
-
-     
-//         &:hover ~ .value-frame{
-//             animation: transparent 1s;
-//         }
-// }
-// .value-title{
-//     padding-top: 1rem;
-//     color: $color-white;
-    
-// }
 .svg-size{
+    height:6rem;
     @media only screen and (max-width:450px){
         height: 4rem;
     }

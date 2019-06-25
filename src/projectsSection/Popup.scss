@@ -22,6 +22,9 @@
    display: flex;
     border-radius: 2px;
     overflow: hidden;
+    @media only screen and (max-width:1200px){
+        flex-direction: column;
+    }
     
 }
 
@@ -36,11 +39,26 @@
 }
 .popup-left{
     width: 80rem;
-    height: 55rem;
-    // min-height: 90vh;
+    height: 58rem;
+    
     overflow: hidden; 
     position: relative;
    margin: 1rem;
+
+   @media only screen and (max-width:802px){
+    width: 60rem;
+    height: 44rem;
+}
+
+@media only screen and (max-width:602px){
+    width: 40rem;
+    height: 32rem;
+ }
+ @media only screen and (max-width:402px){
+    width: 20rem;
+    height: 20rem;
+}
+
    
 }
 .image-gallery{
@@ -50,9 +68,13 @@
     transform: translateY(-50%);
 }
 .popup-right{
-    width: 27vw;
+    width: 30rem;
     
-    position: relative
+    position: relative;
+   
+    @media only screen and (max-width:402px){
+        width: 20rem;
+    }
 }
 
 
@@ -63,31 +85,43 @@
 
     &::before{
         text-shadow: none !important;
-        color: rgba(white, .1) !important;
+        color: rgba(white, .7) !important;
     }
     &:hover::before {
-    color: rgba(white,.1) !important;
+    color: rgba(white,.7) !important;
     }
 }
 .image-gallery-thumbnails{
     width: 80rem;
+    @media only screen and (max-width:802px){
+        width: 60rem ;
+    }
+    @media only screen and (max-width:602px){
+        width: 40rem ;
+    }
+    @media only screen and (max-width:402px){
+        width: 20rem;
+    }
+
 }
 .image-gallery-thumbnail.active{
     border: 4px solid $color-yellow !important;
-
-    // @media (max-width: $ig-screen-sm-min) {
-    //     border: 3px solid white !important;
-    // }
 }
 
-// .image-gallery-left-nav:hover::before{
-//     color: rgba(white, .5) !important;
-// }
-
-// .image-gallery-left-nav::before{
-//     text-shadow: none !important;
-//     color: rgba(white, .5) !important;}
-
+.image-gallery-image{
+    height: 50rem;
+    @media only screen and (max-width:802px){
+       height: 38rem;
+    }
+    @media only screen and (max-width:602px){
+       height: 25rem;
+    }
+    @media only screen and (max-width:402px){
+        height: 14rem;
+    }
+    
+  
+}
 .popup-information{
     padding:  4rem 1rem;
     font-family: "Montserrat";
@@ -97,9 +131,17 @@
     &--title{
         font-size: 4rem;
         padding-bottom: 2rem;
+        @media only screen and (max-width:402px){
+            font-size: 2rem;
+        }
     }
     &--text{
         font-size: 1.7rem;
+        white-space: pre-wrap;
+    }
+
+    @media only screen and (max-width:1200px){
+        padding: 2rem 2rem;
     }
 }
 
@@ -107,10 +149,17 @@
 .card-foto{
     width: 80rem !important;
     height: auto;
+
+    @media only screen and (max-width:802px){
+        width: 60rem !important;
+    }
+    @media only screen and (max-width:602px){
+        width: 40rem !important;
+    }
+    @media only screen and (max-width:402px){
+        width: 20rem !important;
+    }
 }
-
-
-
 
 .popup-exit{
     border: none;
@@ -129,6 +178,9 @@
 
     &:hover{
         color:$color-yellow;
+  
     }
 }
+
+
 

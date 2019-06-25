@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -12,16 +13,14 @@ body {
   font-family: "Montserrat";
   font-weight: 300;
   color: #333;
-  font-size: 2rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.logo-box {
-  height: 100%;
-  padding: 1rem; }
+  font-size: 2rem; }
 
 .logo-nav-bar {
   height: 5rem;
   padding: 1rem 2rem; }
+  @media only screen and (max-width: 300px) {
+    .logo-nav-bar {
+      height: 3rem; } }
 
 .navigation-bar {
   background-color: #fff;
@@ -53,7 +52,7 @@ body {
   background-color: white;
   position: fixed;
   top: 8rem;
-  right: 0;
+  right: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transition: transform 500ms 0ms;
   transform: translateX(0); }
@@ -124,7 +123,7 @@ body {
   transition: all .2s .2s; }
 
 .header {
-  background-image: url(../img/room-bw.jpg);
+  background-image: url(../img/odwazny_konferencyjna1-bw.jpg);
   filter: brightness(0.9);
   width: 100%;
   height: 100vh;
@@ -134,13 +133,9 @@ body {
   transition: all .2s; }
 
 .header:hover {
-  background-image: url(../img/room.jpg); }
+  background-image: url(../img/odwazny_konferencyjna1.jpg); }
 
-.header::after {
-  content: url(../img/room.jpg);
-  display: none; }
-
-.text-box {
+.header__text-box {
   border: 4px solid #c89d66;
   color: #c89d66;
   padding: 2rem;
@@ -151,15 +146,33 @@ body {
   width: 40%;
   border-radius: 2px;
   font-size: 3rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  animation: moveInRight .5s ease-out; }
+  @media only screen and (max-width: 1060px) {
+    .header__text-box {
+      width: 70%; } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 .social-media {
   position: absolute;
-  top: 10rem;
   right: 0;
   display: flex;
   align-items: flex-end;
-  flex-direction: column; }
+  flex-direction: column;
+  animation: moveInLeft .5s ease-out; }
+
+.social-media-header {
+  top: 10rem; }
+
+.social-media-contact {
+  bottom: 3rem; }
 
 .btn-social-media {
   border: none;
@@ -173,6 +186,14 @@ body {
     margin-bottom: 1rem; }
   .btn-social-media:hover {
     padding: 1rem 2rem 1rem 1rem; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 .about-section {
   display: flex;
@@ -191,7 +212,7 @@ body {
   font-size: 6rem;
   font-weight: 600;
   position: absolute;
-  width: 40rem;
+  white-space: nowrap;
   text-align: center; }
 
 .title-box {
@@ -374,9 +395,11 @@ body {
 .value-box-active .value-box__side--back {
   transform: rotateY(0deg); }
 
-@media only screen and (max-width: 450px) {
-  .svg-size {
-    height: 4rem; } }
+.svg-size {
+  height: 6rem; }
+  @media only screen and (max-width: 450px) {
+    .svg-size {
+      height: 4rem; } }
 
 .services-section {
   display: flex;
@@ -384,6 +407,12 @@ body {
   align-items: center;
   padding: 5px 4rem;
   text-align: center; }
+  @media only screen and (max-width: 600px) {
+    .services-section {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 500px) {
+    .services-section {
+      padding: 0 1rem; } }
 
 .service {
   display: flex;
@@ -395,37 +424,42 @@ body {
 .service-foto {
   width: 50%;
   height: 35rem;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   @media only screen and (max-width: 990px) {
     .service-foto {
       height: 40rem; } }
   @media only screen and (max-width: 890px) {
     .service-foto {
       width: 100%;
-      height: 15rem; } }
+      height: 25rem; } }
   .service-foto--1 {
-    background-image: url("../img/foto-1.jpg"); }
+    background-image: url("../img/słońce.png"); }
   .service-foto--2 {
-    background-image: url("../img/foto-2.jpg"); }
+    background-image: url("../img/strzałka.png"); }
   .service-foto--3 {
-    background-image: url("../img/foto-3.jpg"); }
+    background-image: url("../img/serce.png"); }
+  .service-foto--4 {
+    background-image: url("../img/korona.png"); }
 
 .service-text-box {
   width: 50%;
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center; }
   @media only screen and (max-width: 890px) {
     .service-text-box {
-      width: 100%; } }
+      width: 100%;
+      padding: 2rem 0; } }
   .service-text-box--left {
     text-align: left; }
   .service-text-box--right {
     text-align: right; }
     @media only screen and (max-width: 890px) {
       .service-text-box--right {
-        order: 1; } }
+        order: 1;
+        text-align: left; } }
 
 .service-title {
   font-size: 5rem;
@@ -470,6 +504,9 @@ body {
   display: flex;
   border-radius: 2px;
   overflow: hidden; }
+  @media only screen and (max-width: 1200px) {
+    .popup-content {
+      flex-direction: column; } }
 
 .popup-hide {
   visibility: 0;
@@ -481,10 +518,22 @@ body {
 
 .popup-left {
   width: 80rem;
-  height: 55rem;
+  height: 58rem;
   overflow: hidden;
   position: relative;
   margin: 1rem; }
+  @media only screen and (max-width: 802px) {
+    .popup-left {
+      width: 60rem;
+      height: 44rem; } }
+  @media only screen and (max-width: 602px) {
+    .popup-left {
+      width: 40rem;
+      height: 32rem; } }
+  @media only screen and (max-width: 402px) {
+    .popup-left {
+      width: 20rem;
+      height: 20rem; } }
 
 .image-gallery {
   position: absolute;
@@ -493,27 +542,51 @@ body {
   transform: translateY(-50%); }
 
 .popup-right {
-  width: 27vw;
+  width: 30rem;
   position: relative; }
+  @media only screen and (max-width: 402px) {
+    .popup-right {
+      width: 20rem; } }
 
 .image-gallery-fullscreen-button::before,
 .image-gallery-play-button::before,
 .image-gallery-left-nav::before,
 .image-gallery-right-nav::before {
   text-shadow: none !important;
-  color: rgba(255, 255, 255, 0.1) !important; }
+  color: rgba(255, 255, 255, 0.7) !important; }
 
 .image-gallery-fullscreen-button:hover::before,
 .image-gallery-play-button:hover::before,
 .image-gallery-left-nav:hover::before,
 .image-gallery-right-nav:hover::before {
-  color: rgba(255, 255, 255, 0.1) !important; }
+  color: rgba(255, 255, 255, 0.7) !important; }
 
 .image-gallery-thumbnails {
   width: 80rem; }
+  @media only screen and (max-width: 802px) {
+    .image-gallery-thumbnails {
+      width: 60rem; } }
+  @media only screen and (max-width: 602px) {
+    .image-gallery-thumbnails {
+      width: 40rem; } }
+  @media only screen and (max-width: 402px) {
+    .image-gallery-thumbnails {
+      width: 20rem; } }
 
 .image-gallery-thumbnail.active {
   border: 4px solid #c89d66 !important; }
+
+.image-gallery-image {
+  height: 50rem; }
+  @media only screen and (max-width: 802px) {
+    .image-gallery-image {
+      height: 38rem; } }
+  @media only screen and (max-width: 602px) {
+    .image-gallery-image {
+      height: 25rem; } }
+  @media only screen and (max-width: 402px) {
+    .image-gallery-image {
+      height: 14rem; } }
 
 .popup-information {
   padding: 4rem 1rem;
@@ -523,12 +596,28 @@ body {
   .popup-information--title {
     font-size: 4rem;
     padding-bottom: 2rem; }
+    @media only screen and (max-width: 402px) {
+      .popup-information--title {
+        font-size: 2rem; } }
   .popup-information--text {
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    white-space: pre-wrap; }
+  @media only screen and (max-width: 1200px) {
+    .popup-information {
+      padding: 2rem 2rem; } }
 
 .card-foto {
   width: 80rem !important;
   height: auto; }
+  @media only screen and (max-width: 802px) {
+    .card-foto {
+      width: 60rem !important; } }
+  @media only screen and (max-width: 602px) {
+    .card-foto {
+      width: 40rem !important; } }
+  @media only screen and (max-width: 402px) {
+    .card-foto {
+      width: 20rem !important; } }
 
 .popup-exit {
   border: none;
@@ -547,13 +636,36 @@ body {
   .popup-exit:hover {
     color: #c89d66; }
 
+@keyframes showProject {
+  0% {
+    height: 0;
+    opacity: 0; }
+  50% {
+    height: 35rem;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.project-container {
+  width: 33.333334%; }
+  @media only screen and (max-width: 890px) {
+    .project-container {
+      width: 50%; } }
+  @media only screen and (max-width: 400px) {
+    .project-container {
+      width: 100%; } }
+
 .project-box {
   border: none;
   outline: none;
-  width: 33.3333%;
+  width: 100%;
   height: 35rem;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  animation: showProject .5s; }
+  @media only screen and (max-width: 600px) {
+    .project-box {
+      height: 20rem; } }
 
 .project-box:hover .project-foto {
   filter: grayscale(10%) brightness(0.9);
@@ -564,12 +676,6 @@ body {
   height: 100%;
   transition: all .5s;
   filter: grayscale(70%) brightness(0.7); }
-  .project-foto--1 {
-    background-image: url("../img/room.jpg"); }
-  .project-foto--2 {
-    background-image: url("../img/foto-2.jpg"); }
-  .project-foto--3 {
-    background-image: url("../img/foto-3.jpg"); }
 
 .project-text {
   font-family: "Montserrat";
@@ -582,23 +688,75 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all .5s; }
+  @media only screen and (max-width: 600px) {
+    .project-text {
+      font-size: 2rem; } }
+
+.show-projects-btn {
+  background-color: transparent;
+  border: none;
+  outline: none; }
+
+.arrow {
+  height: 7rem;
+  transition: all .5s;
+  cursor: pointer;
+  transform: rotate(-90deg); }
+  .arrow:hover {
+    transform: rotate(-90deg) scale(1.2); }
+  @media only screen and (max-width: 400px) {
+    .arrow {
+      height: 4rem; } }
+
+.flip {
+  transform: rotate(-90deg) rotateY(180deg); }
+  .flip:hover {
+    transform: rotate(-90deg) rotateY(180deg) scale(1.2); }
 
 .contact {
   width: 100%;
-  height: 40rem;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 730px) {
+    .contact {
+      flex-direction: column; } }
 
 .contact-logo {
-  width: 30%;
-  height: 100%;
+  width: 40rem;
+  height: 40rem;
   background-image: url("../img/logoSqr.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  margin: 0 3rem; }
+  @media only screen and (max-width: 880px) {
+    .contact-logo {
+      margin: 0 2rem;
+      width: 30rem;
+      height: 30rem; } }
+  @media only screen and (max-width: 600px) {
+    .contact-logo {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 380px) {
+    .contact-logo {
+      width: 20rem;
+      height: 20rem; } }
 
 .contact-text {
-  padding: 4rem;
-  width: 30%; }
-  .contact-text--right {
-    text-align: right; }
+  cursor: pointer;
+  transition: all .3s;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 2rem;
+  color: #747474;
+  font-weight: 100;
+  outline: none; }
+  @media only screen and (max-width: 730px) {
+    .contact-text:last-child {
+      padding-bottom: 3rem; } }
+
+.contact-text:hover {
+  cursor: pointer;
+  color: #c89d66; }

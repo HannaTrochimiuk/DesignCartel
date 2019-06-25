@@ -1,11 +1,17 @@
 .social-media{
     position: absolute;
-    top: 10rem;
     right: 0;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-  
+    animation: moveInLeft .5s ease-out;
+}
+
+.social-media-header {
+    top: 10rem;
+}
+.social-media-contact {
+   bottom: 3rem;
 }
 
 .btn-social-media{
@@ -22,5 +28,17 @@
 
     &:hover{
         padding: 1rem 2rem 1rem 1rem;
+    }
+}
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(10rem)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
     }
 }

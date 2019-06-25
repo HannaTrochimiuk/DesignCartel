@@ -1,45 +1,72 @@
 import React, { Component } from 'react';
 import Popup from './Popup';
 import Project from './Project';
-import Gallery from './Gallery';
-import "../../node_modules/react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from 'react-image-gallery';
-import foto1 from '../img/room.jpg';
-import foto2 from '../img/room-bw.jpg';
-import foto3 from '../img/foto-1.jpg'
-import foto4 from '../img/foto-2.jpg';
-import foto5 from '../img/foto-3.jpg';
+import ProjectService from '../common/ProjectService';
+import GalleryService from '../common/GalleryService';
+import arrowDown from '../img/svg/back.svg';
 
-const data=[{
-    id:1,
-    foto:foto1,
-    descriptin:'Sala konferencyjna Hol. Ciąg komunikacyjny. Strefa relaksu. Printing Point.',
-    title: 'Odważny'
-}]
 
 class ProjectsSection extends Component {
-    
+    constructor() {
+        super();
+        this.projectService = new ProjectService();
+        this.projects = this.projectService.getProjects();
+        this.galleryService = new GalleryService();
+        this.gallery = this.galleryService.getGallery();
+        this.showProjects = this.showProjects.bind(this);
+        this.state = {
+            selectedProject: this.projects[0],
+            selectedGallery: this.gallery[0],
+            projectsVisible: false
+        }
+    }
+    showPopup = (index) => {
+        this.setState({ selectedProject: this.projects[index], selectedGallery: this.gallery[index] },
+            () => { document.querySelector('.popup').classList.remove('popup-hide'); })
+    }
+    showProjects() {
+        this.setState({ projectsVisible: !this.state.projectsVisible });
+    }
+
+    visibleProjects = () => {
+        var projectsCount = this.state.width < 400 ? 3 : 6;
+
+        return this.state.projectsVisible ? this.projects : this.projects.slice(0, projectsCount);
+
+    }
+
+    updateWindowDimension = () => {
+        this.setState({ width: window.innerWidth });
+    }
+    componentDidMount() {
+        this.updateWindowDimension();
+        window.addEventListener('resize', this.updateWindowDimension);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimension);
+    }
+
     render() {
-       
         return (
             <div className="project-section">
                 <div className="title-box">
                     <h1 className="title">projekty</h1>
                 </div>
                 <div className="projects">
-                    <Project id='1' />
-                    <Project id='2' />
-                    <Project id='3' />
-                    <Project id='3' />
-                    <Project id='1' />
-                    <Project props={data[0]} />
-                    
-                </div>
-                <Popup />
-                {/* <Gallery/> */}
-                
-                
 
+                    {
+                        this.visibleProjects().map((project, index) => {
+                            return <Project projekt={project} onSelected={() => { this.showPopup(index) }} />
+                        })
+                    }
+
+
+
+                </div>
+                <button className='show-projects-btn' onClick={this.showProjects}>
+                    <img className={this.state.projectsVisible ? 'arrow flip' : 'arrow'} src={arrowDown} />
+                </button>
+                <Popup gallery={this.state.selectedGallery} id={this.state.selectedProject.id} title={this.state.selectedProject.title} description={this.state.selectedProject.description} />
             </div>
         )
     };
