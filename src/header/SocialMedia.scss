@@ -4,7 +4,7 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    animation: moveInLeft .5s ease-out;
+
 }
 
 .social-media-header {
@@ -28,17 +28,5 @@
 
     &:hover{
         padding: 1rem 2rem 1rem 1rem;
-    }
-}
-
-@keyframes moveInLeft{
-    0% {
-        opacity: 0;
-        transform: translateX(10rem)
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-
     }
 }
