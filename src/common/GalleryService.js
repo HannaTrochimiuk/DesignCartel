@@ -20,77 +20,93 @@ class GalleryService {
 
     getGallery = () => {
         return [[{
+            id:0,
             original: odwazny1,
             thumbnail: odwazny1,
             originalClass: "card-foto"
         }, {
+            id:1,
             original: odwazny2,
             thumbnail: odwazny2,
             originalClass: "card-foto"
         }, {
+            id:2,
             original: odwazny3,
             thumbnail: odwazny3,
             originalClass: "card-foto"
         }, {
+            id:3,
             original: odwazny4,
             thumbnail: odwazny4,
             originalClass: "card-foto"
         }], 
         [{
+            id:0,
             original: funkcjonalny1,
             thumbnail:funkcjonalny1,
             originalClass: "card-foto"
         },
         {
+            id:1,
             original: funkcjonalny2,
             thumbnail:funkcjonalny2,
             originalClass: "card-foto"
         }],
         [{
+            id:0,
             original: radosnie1,
             thumbnail: radosnie1,
             originalClass: "card-foto"
         },{
+            id:1,
             original: radosnie2,
             thumbnail:radosnie2,
             originalClass: "card-foto"
         }],
         [{
+            id:0,
             original: zSercem1,
             thumbnail: zSercem1,
             originalClass: "card-foto"
         },
         {
+            id:1,
             original: zSercem2,
             thumbnail: zSercem2,
             originalClass: "card-foto"
         },
         {
+            id:2,
             original: zSercem3,
             thumbnail: zSercem3,
             originalClass: "card-foto"
         },
         {
+            id:3,
             original: zSercem4,
             thumbnail: zSercem4,
             originalClass: "card-foto"
         }],
         [{
+            id:0,
             original: organicznie1,
             thumbnail: organicznie1,
             originalClass: "card-foto" 
         }],
         [{
+            id:0,
             original: naturalnie1,
             thumbnail:  naturalnie1,
             originalClass: "card-foto" 
         }],
         [{
+            id:0,
             original: zolty1,
             thumbnail:  zolty1,
             originalClass: "card-foto" 
         }],
         [{
+            id:0,
             original: nietypowa1,
             thumbnail: nietypowa1,
             originalClass: "card-foto"
