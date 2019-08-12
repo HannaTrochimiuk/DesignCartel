@@ -16,6 +16,9 @@ class ProjectsSection extends Component {
         this.galleryService = new GalleryService();
         this.gallery = this.galleryService.getGallery();
         this.showProjects = this.showProjects.bind(this);
+
+        this.test = this.projectService.getProjectsFromBackend();
+
         this.state = {
             selectedProject: this.projects[0],
             selectedGallery: this.gallery[0],
@@ -91,7 +94,7 @@ class ProjectsSection extends Component {
                         closing={this.closePopup}
                     />
                 </CSSTransition>
-
+                    
             </div>
         )
     };

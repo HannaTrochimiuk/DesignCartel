@@ -7,6 +7,7 @@ import naturalnie1 from '../img/naturalnie_openSpace_1000x666.jpg';
 import zolty1 from '../img/zolty_meet_1000x668.jpg';
 import nietypowa1 from '../img/nietypowa_konferencyjna_1000x691.jpg';
 
+const axios = require('axios');
 
 class ProjectService {
     getProjects = () => {
@@ -52,6 +53,12 @@ class ProjectService {
             title: 'Nietypowa'
         }];
     }
+    getProjectsFromBackend = () => {
+        axios.get('http://localhost:5000/projects')
+            .then(function(res) {
+                console.log(res.data);
+            });
+    };
 }
 
 export default ProjectService;
