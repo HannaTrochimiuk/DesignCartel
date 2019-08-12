@@ -47,7 +47,7 @@ class Popup extends Component {
                                 'transform': `translateX(-${this.state.index * 100}%)`
                             }}>
                             {
-                                properties.map(property => <img className='popup-foto' src={property.original} alt='foto' />)
+                                properties.map(property => <img className='popup-foto' src={property.big} alt='foto' />)
                             }
                         </div>
                         <button
@@ -69,7 +69,7 @@ class Popup extends Component {
                                     <button onClick={()=>this.showIdFoto(property.id)} className='popup-foto-btn'>
                                         <img
                                             className={this.state.index === property.id ? 'popup-foto-thumbnail popup-foto-thumbnail--active' : 'popup-foto-thumbnail'}
-                                            src={property.original}
+                                            src={property.thumbnail}
                                             alt='foto' />
                                     </button>)
                             }

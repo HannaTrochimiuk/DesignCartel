@@ -68,7 +68,7 @@
     position: fixed;
     top:0;
     left: 0;
-    background-color: rgba(black,.9);
+    background-color: rgba(black,.7);
     z-index: 100;
 }
 .popup-content{
@@ -87,6 +87,7 @@
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
+    // margin: 1rem;
 }
 
 .popup-foto{
@@ -153,11 +154,12 @@
 }
 
 .popup-content-right{
-    // width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    // border-left: 2px solid rgba($color-yellow , .6);
+    // margin: 1rem;
    
 }
 
@@ -198,10 +200,10 @@
         transform: scale(1.2) translateY(-2px);
     }
    &:hover .line--up{
-       transform:translateX(-50%) rotate(-225deg) ;
+       transform:translateX(-50%) rotate(-45deg) ;
    }
    &:hover .line--down{
-    transform:translateX(-50%) rotate(225deg);
+    transform:translateX(-50%) rotate(45deg);
 }
 }
 .line{

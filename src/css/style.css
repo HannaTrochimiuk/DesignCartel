@@ -543,7 +543,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 100; }
 
 .popup-content {
@@ -641,9 +641,9 @@ body {
   .btn-exit:hover {
     transform: scale(1.2) translateY(-2px); }
   .btn-exit:hover .line--up {
-    transform: translateX(-50%) rotate(-225deg); }
+    transform: translateX(-50%) rotate(-45deg); }
   .btn-exit:hover .line--down {
-    transform: translateX(-50%) rotate(225deg); }
+    transform: translateX(-50%) rotate(45deg); }
 
 .line {
   position: absolute;
