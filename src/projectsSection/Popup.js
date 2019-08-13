@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import arrowDown from '../img/svg/back.svg';
 
-
 class Popup extends Component {
     constructor(props) {
         super(props);
