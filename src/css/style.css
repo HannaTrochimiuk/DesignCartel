@@ -241,11 +241,20 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.6rem; }
+  @media only screen and (max-width: 600px) {
+    .value-text-frame {
+      font-size: 1.4rem; } }
+  @media only screen and (max-width: 400px) {
+    .value-text-frame {
+      font-size: 1.2rem; } }
 
 .value-text-box {
   height: 20rem;
   position: relative;
   transition: all .3s; }
+  @media only screen and (max-width: 470px) {
+    .value-text-box {
+      height: 23rem; } }
 
 .hight-none {
   height: 0; }
