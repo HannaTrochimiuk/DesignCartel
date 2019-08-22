@@ -17,7 +17,10 @@ class ProjectsSection extends Component {
         this.gallery = this.galleryService.getGallery();
         this.showProjects = this.showProjects.bind(this);
 
-        this.test = this.projectService.getProjectsFromBackend();
+        this.projectService.getProjectsFromBackend()
+            .then((data) => {
+                this.setState({test: data});
+            });
 
         this.state = {
             selectedProject: this.projects[0],
@@ -94,7 +97,13 @@ class ProjectsSection extends Component {
                         closing={this.closePopup}
                     />
                 </CSSTransition>
-                    
+                    <div>{this.state.test ? this.state.test[0].description : 'abc'}</div>
+                    <div>{this.state.test ? this.state.test[0].name : 'abc'}</div>
+                    <div>{this.state.test ? this.state.test[0].order : 'abc'}</div>
+                    <div>{this.state.test ? this.state.test[0].photoUrls : 'abc'}</div>
+                    <img src = 'http://localhost:5000/73bbbb6b-b61c-4f3b-8a0a-6b913acccdc2.JPG'/>
+
+
             </div>
         )
     };

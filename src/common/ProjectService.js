@@ -54,9 +54,9 @@ class ProjectService {
         }];
     }
     getProjectsFromBackend = () => {
-        axios.get('http://localhost:5000/projects')
+         return axios.get('http://localhost:5000/projects')
             .then(function(res) {
-                console.log(res.data);
+                return res.data;
             });
     };
 }
