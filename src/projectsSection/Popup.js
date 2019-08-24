@@ -6,8 +6,8 @@ class Popup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            properties: this.props.gallery,
-            property: this.props.gallery[0],
+            // properties: this.props.gallery,
+            // property: this.props.gallery[0],
             index: 0
         }
     }
@@ -17,27 +17,22 @@ class Popup extends Component {
     showNext = () => {
         const newIndex = this.state.index + 1;
         this.setState({
-            property: this.props.gallery[newIndex],
             index: newIndex
         })
-        console.log(this.state.index);
-        console.log(this.state.properties.length);
     }
     showPrev = () => {
         const newIndex = this.state.index - 1;
         this.setState({
-            property: this.props.gallery[newIndex],
             index: newIndex
         })
     }
     showIdFoto(id){
         this.setState({
-            property: this.props.gallery[id],
             index: id
         })
     }
     render() {
-        const { properties, property } = this.state;
+        // const { properties, property } = this.state;
         return (
             <div className='popup'>
                 <div className='popup-content'>
@@ -47,7 +42,7 @@ class Popup extends Component {
                                 'transform': `translateX(-${this.state.index * 100}%)`
                             }}>
                             {
-                                properties.map(property => <img className='popup-foto' src={property.big} alt='foto' />)
+                                this.props.project.photoUrls.map(photoUrl => <img className='popup-foto' src={`http://localhost:5000/${photoUrl}`}/>)
                             }
                         </div>
                         <button
@@ -58,18 +53,18 @@ class Popup extends Component {
                         </button>
                         <button
                             onClick={this.showNext}
-                            disabled={this.state.index === properties.length - 1}
+                            disabled={this.state.index === this.props.project.photoUrls.length - 1}
                             className='popup-btn popup-btn--next'>
                             <img className='popup-arrow popup-arrow--next' src={arrowDown} />
                         </button>
 
                         <div className='popup-foto-slider-wrapper popup-foto-slider-wrapper--thumbnails'>
                             {
-                                properties.map(property =>
-                                    <button onClick={()=>this.showIdFoto(property.id)} className='popup-foto-btn'>
+                                this.props.project.photoUrls.map((photoUrl, index) =>
+                                    <button onClick={()=>this.showIdFoto(index)} className='popup-foto-btn'>
                                         <img
-                                            className={this.state.index === property.id ? 'popup-foto-thumbnail popup-foto-thumbnail--active' : 'popup-foto-thumbnail'}
-                                            src={property.thumbnail}
+                                            className={this.state.index === index ? 'popup-foto-thumbnail popup-foto-thumbnail--active' : 'popup-foto-thumbnail'}
+                                            src={`http://localhost:5000/${photoUrl}`}
                                             alt='foto' />
                                     </button>)
                             }
@@ -79,9 +74,9 @@ class Popup extends Component {
 
                     </div>
                     <div className='popup-content-right'>
-                        <div className='popup-title'>{this.props.title}</div>
+                        <div className='popup-title'>{this.props.project.name}</div>
 
-                        <div className='popup-description'>{this.props.description}</div>
+                        <div className='popup-description'>{this.props.project.description}</div>
 
                     </div>
                     <button className='btn-exit' onClick={this.closePopup}>

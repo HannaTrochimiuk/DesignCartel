@@ -12,28 +12,14 @@ class ProjectsSection extends Component {
     constructor() {
         super();
         this.projectService = new ProjectService();
-        this.projects = this.projectService.getProjects();
-        this.galleryService = new GalleryService();
-        this.gallery = this.galleryService.getGallery();
-        this.showProjects = this.showProjects.bind(this);
-
-        this.projectService.getProjectsFromBackend()
-            .then((data) => {
-                this.setState({test: data});
-            });
-
         this.state = {
-            selectedProject: this.projects[0],
-            selectedGallery: this.gallery[0],
             projectsVisible: false,
             popupAppear: false
         }
     }
-    showPopup = (index) => {
+    showPopup = (project) => {
         this.setState({
-            selectedProject: this.projects[index],
-            selectedGallery: this.gallery[index],
-            index: index,
+            selectedProject: project,
             popupAppear: true
         })
     }
@@ -42,14 +28,14 @@ class ProjectsSection extends Component {
             popupAppear: false
         })
     }
-    showProjects() {
+    showProjects = () => {
         this.setState({ projectsVisible: !this.state.projectsVisible });
     }
 
     visibleProjects = () => {
         var projectsCount = this.state.width < 400 ? 3 : 6;
 
-        return this.state.projectsVisible ? this.projects : this.projects.slice(0, projectsCount);
+        return this.state.projectsVisible ? this.state.projects : this.state.projects.slice(0, projectsCount);
 
     }
 
@@ -59,12 +45,22 @@ class ProjectsSection extends Component {
     componentDidMount() {
         this.updateWindowDimension();
         window.addEventListener('resize', this.updateWindowDimension);
+        this.projectService.getProjectsFromBackend()
+            .then((data) => {
+                this.setState({
+                    projects: data,
+                    selectedProject: data.length > 0 ? data[0] : null
+                });
+            });
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimension);
     }
 
     render() {
+        if (!this.state.projects) {
+            return (<div>Loading</div>);
+        }
         return (
             <div className="project-section">
                 <div className="title-box">
@@ -72,8 +68,8 @@ class ProjectsSection extends Component {
                 </div>
                 <div className="projects">
                     {
-                        this.visibleProjects().map((project, index) => {
-                            return <Project projekt={project} onSelected={() => { this.showPopup(index) }} />
+                        this.visibleProjects().map((project) => {
+                            return <Project project={project} onSelected={() => { this.showPopup(project) }} />
                         })
                     }
                 </div>
@@ -90,19 +86,10 @@ class ProjectsSection extends Component {
                     unmountOnExit={true}
                 >
                     <Popup
-                        gallery={this.state.selectedGallery}
-                        id={this.state.selectedProject.id}
-                        title={this.state.selectedProject.title}
-                        description={this.state.selectedProject.description}
+                        project={this.state.selectedProject}
                         closing={this.closePopup}
                     />
                 </CSSTransition>
-                    <div>{this.state.test ? this.state.test[0].description : 'abc'}</div>
-                    <div>{this.state.test ? this.state.test[0].name : 'abc'}</div>
-                    <div>{this.state.test ? this.state.test[0].order : 'abc'}</div>
-                    <div>{this.state.test ? this.state.test[0].photoUrls : 'abc'}</div>
-                    <img src = 'http://localhost:5000/73bbbb6b-b61c-4f3b-8a0a-6b913acccdc2.JPG'/>
-
 
             </div>
         )
