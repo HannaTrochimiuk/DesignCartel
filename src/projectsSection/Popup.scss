@@ -205,6 +205,10 @@
     &--active{
         outline: 3px solid $color-yellow;
         outline-offset: -3px;
+        @media only screen and(max-width:600px){
+            outline: 1px solid $color-yellow;
+            outline-offset: -1px;
+        }
     }
  
 }

@@ -9,7 +9,6 @@ class Logo extends Component {
 
     }
     scrollToTop = () => {
-        console.log('dupa');
         window.scrollTo({
             top: 0,
             behavior: "smooth"

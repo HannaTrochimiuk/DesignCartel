@@ -605,6 +605,10 @@ body {
   .popup-foto-thumbnail--active {
     outline: 3px solid #c89d66;
     outline-offset: -3px; }
+    @media only screen and (max-width: 600px) {
+      .popup-foto-thumbnail--active {
+        outline: 1px solid #c89d66;
+        outline-offset: -1px; } }
 
 .popup-foto-btn {
   background-color: transparent;
@@ -675,6 +679,7 @@ body {
   height: 35rem;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   animation: showProject .5s; }
   @media only screen and (max-width: 600px) {
     .project-box {
@@ -766,9 +771,10 @@ body {
   color: #747474;
   font-weight: 100;
   outline: none; }
-  @media only screen and (max-width: 730px) {
-    .contact-text:last-child {
-      padding-bottom: 3rem; } }
+
+@media only screen and (max-width: 730px) {
+  .low {
+    padding-bottom: 3rem; } }
 
 .contact-text:hover {
   cursor: pointer;

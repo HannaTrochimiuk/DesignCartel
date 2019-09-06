@@ -10,6 +10,28 @@ class Popup extends Component {
             index: 0
         }
     }
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+        document.addEventListener("keydown", this.escFunction);
+      }
+    
+      componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+        document.removeEventListener("keydown", this.escFunction);
+      }
+      escFunction=(event)=>{
+        if(event.keyCode === 27) {
+          this.closePopup();
+        }
+      }
+    setWrapperRef=(node) => {
+        this.wrapperRef = node;
+      }
+      handleClickOutside = (event) => {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+          this.closePopup();
+        }
+      }
     closePopup = () => {
         this.props.closing()
     }
@@ -19,8 +41,7 @@ class Popup extends Component {
             property: this.props.gallery[newIndex],
             index: newIndex
         })
-        console.log(this.state.index);
-        console.log(this.state.properties.length);
+        
     }
     showPrev = () => {
         const newIndex = this.state.index - 1;
@@ -39,7 +60,7 @@ class Popup extends Component {
         const { properties, property } = this.state;
         return (
             <div className='popup'>
-                <div className='popup-content'>
+                <div ref={this.setWrapperRef} className='popup-content'>
                     <div className='popup-content-left'>
                         <div className='popup-foto-slider-wrapper'
                             style={{
