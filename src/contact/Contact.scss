@@ -41,13 +41,15 @@
     font-weight: 100;
     outline: none;
 
-    &:last-child{
-        @media only screen and (max-width:730px){
-          padding-bottom: 3rem;
-        }
-    }
    
   
+   
+  
+}
+.low{
+    @media only screen and (max-width:730px){
+        padding-bottom: 3rem;
+      }
 }
 
 .contact-text:hover {

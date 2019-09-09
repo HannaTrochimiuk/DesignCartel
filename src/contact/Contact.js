@@ -22,7 +22,7 @@ class Contact extends Component {
             <div className="contact">
                 <button onClick={() => this.callPhone()}class="contact-text">+48 728 899 897</button>
                 <div className="contact-logo">&nbsp;</div>
-                <button onClick={() => this.sendMail()} class="contact-text">hello@designcartel.pl</button>
+                <button onClick={() => this.sendMail()} class="contact-text low">hello@designcartel.pl</button>
                 <SocialMedia class='social-media social-media-contact'/>
             </div>
         )   

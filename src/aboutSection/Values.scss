@@ -11,6 +11,7 @@
         // display: flex;
         width: 90vw;
     }
+  
 }
 
 
@@ -26,12 +27,25 @@
     display: flex;
     align-items: center;
     font-size:1.6rem;
+
+    @media only screen and (max-width:600px) {
+        font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width:400px) {
+        font-size: 1.2rem;
+    }
+ 
  
 }
 .value-text-box{
     height: 20rem;
     position: relative;
     transition: all .3s;
+
+    @media only screen and (max-width:470px){
+       height: 23rem;
+    }
 }
 
 .hight-none{
