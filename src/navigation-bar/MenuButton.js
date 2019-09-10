@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {FormattedMessage} from 'react-intl'
+
 
 class MenuButton extends Component {
     constructor(props) {
@@ -20,7 +22,9 @@ class MenuButton extends Component {
     render() {
         return (
             <button className={this.props.class} id={this.props.id} onClick={this.scrollTo}>
-                <div className="btn-menu-text">{this.props.name}</div>
+                <div className="btn-menu-text">
+                    <FormattedMessage id={this.props.idText} />
+                </div>
             </button>
         );
     }

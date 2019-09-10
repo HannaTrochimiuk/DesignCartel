@@ -5,21 +5,44 @@ import AboutSection from './aboutSection/AboutSection';
 import ServicesSection from './servicesSection/ServicesSection';
 import ProjectsSection from './projectsSection/ProjectsSection';
 import Contact from './contact/Contact';
+import {IntlProvider} from 'react-intl';
+import messages_pl from "./common/pl.json";
+import messages_en from "./common/en.json";
+
+
 
 
 
 class App extends Component {
+    constructor(){
+        super();
+        App.language="pl";
+        this.state = {
+            language:"pl"
+        }
+    }
+    messages = {
+        'pl': messages_pl,
+        'en': messages_en
+    };
+    toggleLanguage = () => {
+        const language = this.state.language=="pl" ? "en" : "pl";
+        App.language = language;
+        this.setState({
+            language:language
+        })
+        
+    }
     render() {
         return (
-            <div>
-                
-                <NavigationBar/>
-                <Header/>
-                <AboutSection/>
-                <ServicesSection/>
-                <ProjectsSection/>
-                <Contact/>
-            </div>
+            <IntlProvider locale={this.state.language} messages={this.messages[this.state.language]}>
+                <NavigationBar />
+                <Header toggleLanguage = {this.toggleLanguage}/>
+                <AboutSection />
+                <ServicesSection />
+                <ProjectsSection />
+                <Contact />
+            </IntlProvider>
         );
     }
 }

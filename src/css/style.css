@@ -184,6 +184,36 @@ body {
   .btn-social-media:hover {
     padding: 1rem 2rem 1rem 1rem; }
 
+.language-box {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  top: 10rem; }
+
+.language-btn {
+  width: 3rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: all .2s;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+  .language-btn:not(:last-of-type) {
+    margin-bottom: 1rem; }
+  .language-btn:hover {
+    padding: 1rem 1rem 1rem 2rem;
+    color: #c89d66; }
+
+.active {
+  padding: 1rem 1rem 1rem 2rem;
+  color: #c89d66; }
+
 .about-section {
   display: flex;
   flex-direction: column;
@@ -385,17 +415,34 @@ body {
     .value-box__side--back {
       background-color: #a18a7a;
       transform: rotateY(180deg);
-      color: #fff;
-      font-size: 2rem; }
-      @media only screen and (max-width: 670px) {
-        .value-box__side--back {
-          font-size: 1.5rem; } }
-      @media only screen and (max-width: 450px) {
-        .value-box__side--back {
-          font-size: 1.2rem; } }
-      @media only screen and (max-width: 380px) {
-        .value-box__side--back {
-          font-size: 1rem; } }
+      color: #fff; }
+
+.pl {
+  font-size: 2rem; }
+  @media only screen and (max-width: 670px) {
+    .pl {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 450px) {
+    .pl {
+      font-size: 1.2rem; } }
+  @media only screen and (max-width: 380px) {
+    .pl {
+      font-size: 1rem; } }
+
+.en {
+  font-size: 1.8rem; }
+  @media only screen and (max-width: 670px) {
+    .en {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 520px) {
+    .en {
+      font-size: 1.2rem; } }
+  @media only screen and (max-width: 450px) {
+    .en {
+      font-size: 1rem; } }
+  @media only screen and (max-width: 380px) {
+    .en {
+      font-size: .8rem; } }
 
 .value-box-active .value-box__side--front {
   transform: rotateY(-180deg); }

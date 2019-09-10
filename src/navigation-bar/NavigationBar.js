@@ -8,8 +8,8 @@ class NavigationBar extends Component {
         return(
             <div className = "navigation-bar">
                 <Logo/>  
-                <Menu/>
-                <MenuFold />
+                <Menu class="menu"/>
+                <MenuFold class="menu-fold hide" />
             </div>
         );
     }

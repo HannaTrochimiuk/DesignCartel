@@ -78,19 +78,41 @@
             background-color: $color-brown;
             transform: rotateY(180deg);
             color: $color-white;
-            font-size: 2rem;
-            @media only screen and (max-width:670px){
-                font-size: 1.5rem;
-            }
-            @media only screen and (max-width:450px){
-                font-size: 1.2rem;
-            }
-            @media only screen and (max-width:380px){
-               font-size: 1rem;
-            }
+            
+           
+            
+            
+            
         }
     }
 
+}
+.pl{
+    font-size: 2rem;
+    @media only screen and (max-width:670px){
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width:450px){
+        font-size: 1.2rem;
+    }
+    @media only screen and (max-width:380px){
+       font-size: 1rem;
+    }
+}
+.en{
+    font-size: 1.8rem;
+    @media only screen and (max-width:670px){
+        font-size: 1.3rem;
+    }
+    @media only screen and (max-width:520px){
+        font-size: 1.2rem;
+    }
+    @media only screen and (max-width:450px){
+        font-size: 1rem;
+    }
+    @media only screen and (max-width:380px){
+       font-size: .8rem;
+    }
 }
 
 .value-box-active .value-box__side--front{
@@ -109,4 +131,5 @@
         height: 4rem;
     }
 }
+
 

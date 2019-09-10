@@ -5,6 +5,8 @@ import ProjectService from '../common/ProjectService';
 import GalleryService from '../common/GalleryService';
 import arrowDown from '../img/svg/back.svg';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import {FormattedMessage} from 'react-intl'
+
 
 
 
@@ -62,7 +64,10 @@ class ProjectsSection extends Component {
         return (
             <div className="project-section">
                 <div className="title-box">
-                    <h1 className="title">projekty</h1>
+                    <h1 className="title">
+                        <FormattedMessage id="menuProjects"/>
+
+                    </h1>
                 </div>
                 <div className="projects">
                     {

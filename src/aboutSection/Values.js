@@ -5,75 +5,78 @@ import design from '../img/svg/design.svg';
 import people from '../img/svg/people.svg';
 import recycle from '../img/recycle.png';
 import ValueService from '../common/ValueService';
+import { FormattedMessage } from 'react-intl'
+
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 class Values extends Component {
     constructor(props) {
         super(props);
-        this.valueService = new ValueService();
-        this.values = this.valueService.getValue();
+        // this.valueService = new ValueService();
+        // this.values = this.valueService.getValue();
         this.state = {
             appearText: false
         };
-
     }
 
     toggleAppear = () => {
         this.setState({
             appearText: false,
-            activeValue:null,
-            index:null
+            activeValue: null,
+
         })
     };
-    setActiveBox = (index) => {
+    setActiveBox = (id) => {
         this.setState({
-            activeValue: this.values[index],
-            index: index,
-            appearText:true
+            activeValue: id,
+            appearText: true
         })
     };
 
     render() {
         return (
             <div className='values-box'
-            onMouseLeave={() => this.toggleAppear()}
+                onMouseLeave={() => this.toggleAppear()}
             >
                 <div className="values">
                     <ValueBox
-                        className={this.state.index == 0 ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox(0)}
+                        className={this.state.activeValue == "valueTextHuman" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.setActiveBox("valueTextHuman")}
                         iconWhite={people}
-                        title='Człowiek w przestrzeni' />
+                        id="valueHuman" />
                     <ValueBox
-                        className={this.state.index == 1 ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox(1)}
+                        className={this.state.activeValue == "valueTextDesign" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.setActiveBox("valueTextDesign")}
                         iconWhite={design}
-                        title='Design' />
+                        id="valueDesign" />
                     <ValueBox
-                        className={this.state.index == 2 ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox(2)}
+                        className={this.state.activeValue == "valueTextZeroWaste" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.setActiveBox("valueTextZeroWaste")}
                         iconWhite={recycle}
-                        title='Zero waste' />
+                        id="valueZeroWaste" />
                     <ValueBox
-                        className={this.state.index == 3 ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox(3)}
+                        className={this.state.activeValue == "valueTextEcoFriendly" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.setActiveBox("valueTextEcoFriendly")}
                         iconWhite={planet}
-                        title='Eco Friendly' />
+                        id="valueEcoFriendly" />
                 </div>
 
 
-                <div className= {this.state.appearText ? 'value-text-box' : 'value-text-box hight-none'}>
+                <div className={this.state.activeValue ? 'value-text-box' : 'value-text-box hight-none'}>
                     <TransitionGroup>
                         <CSSTransition
-                            key={this.state.index}
+                            key={this.state.activeValue}
                             timeout={600}
                             classNames='slide'
                             in={this.state.appearText}
                             appear={true}
                         >
-                        {this.state.appearText ?  <div className='value-text-frame'>{this.state.activeValue.text}</div> :<div />}
-                           
+                            {this.state.appearText ?
+                                <div className='value-text-frame'>
+                                    <FormattedMessage id={this.state.activeValue} />
+                                </div> : <div />}
+
                         </CSSTransition>
 
                     </TransitionGroup>

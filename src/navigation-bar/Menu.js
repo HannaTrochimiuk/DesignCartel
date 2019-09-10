@@ -5,11 +5,11 @@ import MenuButton from './MenuButton.js';
 class Menu extends Component {
     render() {
         return(
-            <div className="menu">
-                <MenuButton class='btn-menu' id='about-section' name='o nas'/>
-                <MenuButton class='btn-menu' id='services-section' name='usługi'/>
-                <MenuButton class='btn-menu' id='project-section' name='projekty'/>
-                <MenuButton class='btn-menu' id='contact' name='kontakt'/>
+            <div className={this.props.class}>
+                <MenuButton class='btn-menu' id='about-section' idText="menuAbout"/>
+                <MenuButton class='btn-menu' id='services-section' idText="menuServices"/>
+                <MenuButton class='btn-menu' id='project-section' idText="menuProjects"/>
+                <MenuButton class='btn-menu' id='contact' idText="menuContact"/>
             </div>
         );
     }
