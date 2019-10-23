@@ -13,43 +13,43 @@ class ProjectService {
         return [{
             id: 0,
             foto: odwazny1,
-            description: 'Sala konferencyjna.\nHol.\nCiąg komunikacyjny.\nStrefa relaksu.\nPrinting Point.',
-            title: 'Odważny'
+            description:  "braveText",
+            title: 'brave'
         }, {
             id: 1,
             foto: funkcjonalny1,
-            description: 'Hol. Ciąg komunikacyjny. Szklane ściany. Pokoje.',
-            title: ' Funkcjonalny'
+            description: 'functionalText',
+            title: 'functional'
         }, {
             id: 2,
             foto: radosnie1,
-            description: 'Recepcja. Strefa wejścia wraz z poczekalnią dla Gości. Gabinety.',
-            title: 'Radośnie'
+            description: 'happilyText',
+            title: 'happily'
         }, {
             id: 3,
             foto: zSercem1,
-            description: 'Kuchnia. Jadalnia. Chill out.',
-            title: 'Z sercem'
+            description: 'withHeartText',
+            title: 'withHeart'
         },  {
             id: 4,
             foto: organicznie1,
-            description: 'Recepcja. Strefa dla Gości.',
-            title: 'Organicznie' 
+            description: 'biophilicText',
+            title: 'biophilic' 
         }, {
             id: 5,
             foto: naturalnie1,
-            description: 'Strefa Co-workingu.',
-            title: 'Naturalnie' 
+            description: 'naturalText',
+            title: 'natural' 
         },{
             id:6,
             foto:zolty1,
-            description:'Pokoje Pracowników wraz z przestrzenią dla Gości.',
-            title: 'Żółty'
+            description:'yellowText',
+            title: 'yellow'
         }, {
             id:7,
             foto:nietypowa1,
-            description: 'Sala konferencyjna / Sala szkoleniowa',
-            title: 'Nietypowa'
+            description: 'untypicalText',
+            title: 'untypical'
         }];
     }
 }

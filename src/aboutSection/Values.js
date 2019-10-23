@@ -4,17 +4,13 @@ import planet from '../img/svg/planet-earth.svg';
 import design from '../img/svg/design.svg';
 import people from '../img/svg/people.svg';
 import recycle from '../img/recycle.png';
-import ValueService from '../common/ValueService';
 import { FormattedMessage } from 'react-intl'
-
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 class Values extends Component {
     constructor(props) {
         super(props);
-        // this.valueService = new ValueService();
-        // this.values = this.valueService.getValue();
         this.state = {
             appearText: false
         };

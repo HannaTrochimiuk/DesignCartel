@@ -193,9 +193,10 @@ body {
   top: 10rem; }
 
 .language-btn {
-  width: 3rem;
+  width: 2rem;
   outline: none;
   cursor: pointer;
+  font-size: 1.3rem;
   font-family: inherit;
   border: none;
   background-color: rgba(255, 255, 255, 0.9);
@@ -205,7 +206,7 @@ body {
   transition: all .2s;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
   .language-btn:not(:last-of-type) {
-    margin-bottom: 1rem; }
+    margin-bottom: .5rem; }
   .language-btn:hover {
     padding: 1rem 1rem 1rem 2rem;
     color: #c89d66; }
