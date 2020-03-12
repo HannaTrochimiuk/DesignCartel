@@ -1,19 +1,16 @@
 
 .btn-menu{
     border: none;
-    background-color: $color-white;
+    background-color: red;
     position: relative;
     width: 13rem;
-    padding: 1rem ;
+    // padding: 1rem ;
     cursor: pointer;
 
     @media only screen and (max-width:800px){
-        background-color: transparent;
+        // background-color: transparent;
     }
     
-
-   
- 
     &:hover{
         & .btn-menu-text{
             color: white;
@@ -42,8 +39,10 @@
         background-color: $color-yellow;
         transform: scaleX(0);
         transition: transform .2s,
-            height .4s cubic-bezier(1,0,0,1) .2s,
-            background-color .1s;
+            height .4s cubic-bezier(1,0,0,1) .2s
+            // ,
+            // background-color .1s
+            ;
     }
                 
     &:focus{
@@ -61,6 +60,6 @@
     font-weight: 300;
     z-index: 10000;
     position: relative;
+    background-color: green;
     transition: all .2s .2s;
- 
 }

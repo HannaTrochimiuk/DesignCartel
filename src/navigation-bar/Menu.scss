@@ -1,12 +1,20 @@
 .menu {
     display: flex;
-    
-    @media only screen and (max-width:800px){
-        display: none;
-    }
-   
+ 
 }
-
+.menu-fold{
+    flex-direction: column;
+    position: fixed;
+    top:8rem;
+    right: 1rem;
+    box-shadow: 0 1rem 2rem rgba(black,.2);
+    transition: transform 500ms 0ms;
+    transform: translateX(0);
+}
+.hide{
+    transition: transform 500ms 0ms;
+    transform: translateX(20rem);
+}
 
 
 

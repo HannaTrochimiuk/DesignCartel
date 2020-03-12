@@ -9,10 +9,6 @@ import {IntlProvider} from 'react-intl';
 import messages_pl from "./common/pl.json";
 import messages_en from "./common/en.json";
 
-
-
-
-
 class App extends Component {
     constructor(){
         super();
@@ -26,12 +22,11 @@ class App extends Component {
         'en': messages_en
     };
     toggleLanguage = () => {
-        const language = this.state.language=="pl" ? "en" : "pl";
-        App.language = language;
+        const newLanguage = this.state.language=="pl" ? "en" : "pl";
+        App.language = newLanguage;
         this.setState({
-            language:language
+            language:newLanguage
         })
-        
     }
     render() {
         return (

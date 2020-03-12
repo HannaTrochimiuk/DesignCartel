@@ -1,36 +1,7 @@
 .menu-fold-box{
-    display: none;
-    
-    @media only screen and (max-width:800px){
-        display: flex;
-        
-    }
-}
-
-.menu-fold{
     display: flex;
-    flex-direction: column;
-    background-color: rgba(white,1);
-    position: fixed;
-    top: 8rem;
-    right: 1rem;
-    box-shadow: 0 1rem 2rem rgba(black,.2);
-    transition: transform 500ms 0ms;
-    transform: translateX(0);
-}
-.hide{
-    transition: transform 500ms 0ms;
-    transform: translateX(20rem);
 }
 
-@keyframes goDown{
-    0%{
-        transform: translateX(20rem);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
 
 .menu-fold-btn{
     border: none;

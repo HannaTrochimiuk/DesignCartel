@@ -15,18 +15,18 @@ body {
   color: #333;
   font-size: 2rem; }
 
+.logo-nav-bar-box {
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer; }
+
 .logo-nav-bar {
   height: 5rem;
   padding: 1rem 2rem; }
   @media only screen and (max-width: 300px) {
     .logo-nav-bar {
       height: 3rem; } }
-
-.logo-nav-bar-box {
-  border: none;
-  background-color: white;
-  outline: none;
-  cursor: pointer; }
 
 .navigation-bar {
   background-color: #fff;
@@ -42,20 +42,9 @@ body {
 
 .menu {
   display: flex; }
-  @media only screen and (max-width: 800px) {
-    .menu {
-      display: none; } }
-
-.menu-fold-box {
-  display: none; }
-  @media only screen and (max-width: 800px) {
-    .menu-fold-box {
-      display: flex; } }
 
 .menu-fold {
-  display: flex;
   flex-direction: column;
-  background-color: white;
   position: fixed;
   top: 8rem;
   right: 1rem;
@@ -67,11 +56,8 @@ body {
   transition: transform 500ms 0ms;
   transform: translateX(20rem); }
 
-@keyframes goDown {
-  0% {
-    transform: translateX(20rem); }
-  100% {
-    transform: translateX(0); } }
+.menu-fold-box {
+  display: flex; }
 
 .menu-fold-btn {
   border: none;
@@ -84,14 +70,10 @@ body {
 
 .btn-menu {
   border: none;
-  background-color: #fff;
+  background-color: red;
   position: relative;
   width: 13rem;
-  padding: 1rem;
   cursor: pointer; }
-  @media only screen and (max-width: 800px) {
-    .btn-menu {
-      background-color: transparent; } }
   .btn-menu:hover .btn-menu-text {
     color: white; }
     @media only screen and (max-width: 800px) {
@@ -115,7 +97,7 @@ body {
     height: 3px;
     background-color: #c89d66;
     transform: scaleX(0);
-    transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
   .btn-menu:focus {
     outline: none; }
 
@@ -127,6 +109,7 @@ body {
   font-weight: 300;
   z-index: 10000;
   position: relative;
+  background-color: green;
   transition: all .2s .2s; }
 
 .header {

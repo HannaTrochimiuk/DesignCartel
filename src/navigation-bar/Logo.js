@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.jpg';
 
-
 class Logo extends Component {
-
     constructor(){
         super();
-
     }
     scrollToTop = () => {
         window.scrollTo({
