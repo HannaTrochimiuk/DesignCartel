@@ -68,27 +68,28 @@ body {
   color: white;
   width: 10rem; }
 
-.btn-menu {
+.menu-btn {
   border: none;
-  background-color: red;
+  background-color: white;
   position: relative;
   width: 13rem;
-  cursor: pointer; }
-  .btn-menu:hover .btn-menu-text {
+  cursor: pointer;
+  padding: 1rem; }
+  .menu-btn:hover .menu-btn-text {
     color: white; }
     @media only screen and (max-width: 800px) {
-      .btn-menu:hover .btn-menu-text {
+      .menu-btn:hover .menu-btn-text {
         color: #333;
         transform: scale(1.3);
         transition: transform .2s 0s; } }
-  .btn-menu:hover:before {
+  .menu-btn:hover:before {
     transform: scaleX(1);
     height: 100%; }
     @media only screen and (max-width: 800px) {
-      .btn-menu:hover:before {
+      .menu-btn:hover:before {
         transform: scaleX(0);
         height: 3px; } }
-  .btn-menu::before {
+  .menu-btn::before {
     content: '';
     position: absolute;
     left: 0;
@@ -98,10 +99,10 @@ body {
     background-color: #c89d66;
     transform: scaleX(0);
     transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
-  .btn-menu:focus {
+  .menu-btn:focus {
     outline: none; }
 
-.btn-menu-text {
+.menu-btn-text {
   font-size: 2rem;
   font-family: "Montserrat";
   text-decoration: none;
@@ -109,7 +110,6 @@ body {
   font-weight: 300;
   z-index: 10000;
   position: relative;
-  background-color: green;
   transition: all .2s .2s; }
 
 .header {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 
-
 class ManuFold extends Component {
     constructor() {
         super();

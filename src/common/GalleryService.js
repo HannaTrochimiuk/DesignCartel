@@ -14,7 +14,6 @@ import organicznie1 from '../img/organicznie_recepcja1_1000x666.jpg';
 import naturalnie1 from '../img/naturalnie_openSpace_1000x666.jpg';
 import zolty1 from '../img/zolty_meet_1000x668.jpg';
 import nietypowa1 from '../img/nietypowa_konferencyjna_1000x691.jpg';
-
 import odwazny1_big from '../img/odwazny_konferencyjna1.jpg';
 import odwazny2_big from '../img/odwazny_hol1.jpg';
 import odwazny3_big from '../img/odwazny_chill1.jpg';

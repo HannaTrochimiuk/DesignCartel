@@ -1,18 +1,14 @@
 
-.btn-menu{
+.menu-btn{
     border: none;
-    background-color: red;
+    background-color: white;
     position: relative;
     width: 13rem;
-    // padding: 1rem ;
     cursor: pointer;
+    padding: 1rem;
 
-    @media only screen and (max-width:800px){
-        // background-color: transparent;
-    }
-    
     &:hover{
-        & .btn-menu-text{
+        & .menu-btn-text{
             color: white;
             @media only screen and (max-width:800px){
                 color:$color-grey-1;
@@ -39,20 +35,14 @@
         background-color: $color-yellow;
         transform: scaleX(0);
         transition: transform .2s,
-            height .4s cubic-bezier(1,0,0,1) .2s
-            // ,
-            // background-color .1s
-            ;
-    }
-                
+            height .4s cubic-bezier(1,0,0,1) .2s;
+    }         
     &:focus{
         outline: none;
-    }
-                
+    }          
 }
 
-
-.btn-menu-text{
+.menu-btn-text{
     font-size: 2rem;
     font-family: "Montserrat";
     text-decoration: none;
@@ -60,6 +50,5 @@
     font-weight: 300;
     z-index: 10000;
     position: relative;
-    background-color: green;
     transition: all .2s .2s;
 }
