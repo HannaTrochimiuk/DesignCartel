@@ -96,15 +96,10 @@ class Popup extends Component {
 
                     </div>
                     <div className='popup-content-right'>
-<<<<<<< HEAD
                         <div className='popup-title'>{this.props.project.name}</div>
 
                         <div className='popup-description'>{this.props.project.description}</div>
 
-=======
-                        <div className='popup-title'><FormattedMessage id={this.props.title}/></div>
-                        <div className='popup-description'><FormattedMessage id={this.props.description}/></div>
->>>>>>> master
                     </div>
                     <button className='btn-exit' onClick={this.closePopup}>
                         <div className='line line--up'/>

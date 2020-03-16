@@ -5,40 +5,68 @@ import AboutSection from './aboutSection/AboutSection';
 import ServicesSection from './servicesSection/ServicesSection';
 import ProjectsSection from './projectsSection/ProjectsSection';
 import Contact from './contact/Contact';
-import {IntlProvider} from 'react-intl';
-import messages_pl from "./common/pl.json";
-import messages_en from "./common/en.json";
+import { IntlProvider } from 'react-intl';
+// import messages_pl from "./common/pl.json";
+// import messages_en from "./common/en.json";
+import TextService from './common/TextService'
+const axios = require('axios');
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super();
-        App.language="pl";
+        this.textService = new TextService();
+        App.language = "pl";
         this.state = {
-            language:"pl"
+            language: "pl"
         }
     }
-    messages = {
-        'pl': messages_pl,
-        'en': messages_en
-    };
+    componentDidMount = async () => {
+        var messages = await this.textService.getTextFromBackend();
+        this.setState({ messages: messages });
+        console.log(messages);
+        // this.downloadLanguages();
+
+    }
+
+
+    // downloadLanguages = () => {
+    //     var list = [];
+    //     var keys = Object.keys(messages_en);
+    //     for (var i = 0; i < keys.length; i++) {
+    //         var key = keys[i];
+    //         list.push({
+    //             key: key,
+    //             pl: messages_pl[key],
+    //             en: messages_en[key]
+    //         });
+    //     }
+    //     console.log(list);
+    //     axios.post('http://localhost:5000/text',list);
+    // }
+    
+
     toggleLanguage = () => {
-        const newLanguage = this.state.language=="pl" ? "en" : "pl";
+        const newLanguage = this.state.language == "pl" ? "en" : "pl";
         App.language = newLanguage;
         this.setState({
-            language:newLanguage
+            language: newLanguage
         })
     }
     render() {
-        return (
-            <IntlProvider locale={this.state.language} messages={this.messages[this.state.language]}>
-                <NavigationBar />
-                <Header toggleLanguage = {this.toggleLanguage}/>
-                <AboutSection />
-                <ServicesSection />
-                <ProjectsSection />
-                <Contact />
-            </IntlProvider>
-        );
+        if (this.state.messages) {
+            return (
+                <IntlProvider locale={this.state.language} messages={this.state.messages[this.state.language]}>
+                    <NavigationBar />
+                    <Header toggleLanguage={this.toggleLanguage} />
+                    <AboutSection />
+                    <ServicesSection />
+                    {/* <ProjectsSection /> */}
+                    <Contact />
+                </IntlProvider>
+            );
+        } else {
+            return (<div />);
+        }
     }
 }
 
