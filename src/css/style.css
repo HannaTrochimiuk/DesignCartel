@@ -113,7 +113,6 @@ body {
   transition: all .2s .2s; }
 
 .header {
-  background-image: url(../img/odwazny_konferencyjna1-bw.jpg);
   filter: brightness(0.9);
   width: 100%;
   height: 100vh;
@@ -121,9 +120,6 @@ body {
   background-position: center;
   position: relative;
   transition: all .2s; }
-
-.header:hover {
-  background-image: url(../img/odwazny_konferencyjna1.jpg); }
 
 .header__text-box {
   border: 4px solid #c89d66;
@@ -154,7 +150,7 @@ body {
 .social-media-contact {
   bottom: 3rem; }
 
-.btn-social-media {
+.social-media-btn {
   border: none;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem;
@@ -162,9 +158,9 @@ body {
   border-bottom-left-radius: 4px;
   transition: all .2s;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
-  .btn-social-media:not(:last-of-type) {
+  .social-media-btn:not(:last-of-type) {
     margin-bottom: 1rem; }
-  .btn-social-media:hover {
+  .social-media-btn:hover {
     padding: 1rem 2rem 1rem 1rem; }
 
 .language-box {

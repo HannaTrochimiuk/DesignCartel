@@ -1,5 +1,4 @@
 .header{
-    background-image: url(../img/odwazny_konferencyjna1-bw.jpg);
     filter: brightness(.9);
     width: 100%;
     height: 100vh;
@@ -9,9 +8,9 @@
     transition: all .2s;  
 }
 
-.header:hover{
-    background-image: url(../img/odwazny_konferencyjna1.jpg);
-}
+// .header:hover{
+//     background-image: url(../img/odwazny_konferencyjna1.jpg);
+// }
 
 
 .header__text-box{

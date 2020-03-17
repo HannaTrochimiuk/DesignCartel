@@ -7,11 +7,12 @@ class SocialMedia extends Component {
         return (
             <div className={this.props.class}>
                 <a href='https://www.facebook.com/Design-Cartel-2160779044016659'
-                   className='btn-social-media'>
-                    <img src={fbIcon} />
+                    className='social-media-btn'>
+                    <img alt='facebook' src={fbIcon} />
                 </a>
-                <a href='https://www.instagram.com/cartel.design/ ' className='btn-social-media'>
-                    <img src={insIcon} />
+                <a href='https://www.instagram.com/cartel.design/ '
+                    className='social-media-btn'>
+                    <img alt='instagram' src={insIcon} />
                 </a>
             </div>
         );

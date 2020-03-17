@@ -9,13 +9,14 @@ import { IntlProvider } from 'react-intl';
 // import messages_pl from "./common/pl.json";
 // import messages_en from "./common/en.json";
 import TextService from './common/TextService'
-const axios = require('axios');
+// const axios = require('axios');
 
 class App extends Component {
     constructor() {
         super();
         this.textService = new TextService();
         App.language = "pl";
+        App.toggleLanguage= this.toggleLanguage;
         this.state = {
             language: "pl"
         }
@@ -46,7 +47,7 @@ class App extends Component {
     
 
     toggleLanguage = () => {
-        const newLanguage = this.state.language == "pl" ? "en" : "pl";
+        const newLanguage = this.state.language === "pl" ? "en" : "pl";
         App.language = newLanguage;
         this.setState({
             language: newLanguage
@@ -57,7 +58,7 @@ class App extends Component {
             return (
                 <IntlProvider locale={this.state.language} messages={this.state.messages[this.state.language]}>
                     <NavigationBar />
-                    <Header toggleLanguage={this.toggleLanguage} />
+                    <Header />
                     <AboutSection />
                     <ServicesSection />
                     {/* <ProjectsSection /> */}
