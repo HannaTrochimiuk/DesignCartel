@@ -6,81 +6,93 @@ import people from '../img/svg/people.svg';
 import recycle from '../img/recycle.png';
 import { FormattedMessage } from 'react-intl'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import ReactCSSTransitionReplace from 'react-css-transition-replace';
+
 
 
 class Values extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            appearText: false
-        };
-    }
-
-    toggleAppear = () => {
-        this.setState({
-            appearText: false,
-            activeValue: null,
-
+    constructor() {
+        super();
+        this.state = ({
+            inProp: false
         })
     };
-    setActiveBox = (id) => {
+    changeKey = (key) => {
         this.setState({
-            activeValue: id,
-            appearText: true
+            key: key,
+            inProp: true
         })
     };
+
+
+    hideText = () => {
+        this.setState({
+            key: ' ',
+            inProp: false
+        })
+    };
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         appearText: false
+    //     };
+    // }
+
+    // toggleAppear = () => {
+    //     this.setState({
+    //         appearText: false,
+    //         activeValue: null,
+
+    //     })
+    // };
+    // setActiveBox = (id) => {
+    //     this.setState({
+    //         activeValue: id,
+    //         appearText: true
+    //     })
+    // };
 
     render() {
         return (
-            <div className='values-box'
-                onMouseLeave={() => this.toggleAppear()}
-            >
-                <div className="values">
+            <div className='values-box' onMouseLeave={() => this.hideText()}>
+                <div className="values-circles"  >
                     <ValueBox
-                        className={this.state.activeValue == "valueTextHuman" ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox("valueTextHuman")}
+                        className={this.state.key == "valueTextHuman" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.changeKey("valueTextHuman")}
                         iconWhite={people}
                         id="valueHuman" />
                     <ValueBox
-                        className={this.state.activeValue == "valueTextDesign" ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox("valueTextDesign")}
+                        className={this.state.key == "valueTextDesign" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.changeKey("valueTextDesign")}
                         iconWhite={design}
                         id="valueDesign" />
                     <ValueBox
-                        className={this.state.activeValue == "valueTextZeroWaste" ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox("valueTextZeroWaste")}
+                        className={this.state.key == "valueTextZeroWaste" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.changeKey("valueTextZeroWaste")}
                         iconWhite={recycle}
                         id="valueZeroWaste" />
                     <ValueBox
-                        className={this.state.activeValue == "valueTextEcoFriendly" ? 'value-box value-box-active' : 'value-box'}
-                        onMouseEnter={() => this.setActiveBox("valueTextEcoFriendly")}
+                        className={this.state.key == "valueTextEcoFriendly" ? 'value-box value-box-active' : 'value-box'}
+                        onMouseEnter={() => this.changeKey("valueTextEcoFriendly")}
                         iconWhite={planet}
                         id="valueEcoFriendly" />
                 </div>
 
 
-                <div className={this.state.activeValue ? 'value-text-box' : 'value-text-box hight-none'}>
-                    <TransitionGroup>
-                        <CSSTransition
-                            key={this.state.activeValue}
-                            timeout={600}
-                            classNames='slide'
-                            in={this.state.appearText}
-                            appear={true}
-                        >
-                            {this.state.appearText ?
-                                <div className='value-text-frame'>
-                                    <FormattedMessage id={this.state.activeValue} />
-                                </div> : <div />}
-
-                        </CSSTransition>
-
-                    </TransitionGroup>
-                </div>
-
-
-
-
+                <CSSTransition
+                    in={this.state.inProp}
+                    timeout={800}
+                    classNames='my-node'
+                    unmountOnExit>
+                    <div>
+                        <ReactCSSTransitionReplace transitionName="cross-fade"
+                            transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+                            <div key={this.state.key} className='values-text' >
+                                <FormattedMessage id={this.state.key} />
+                            </div>
+                        </ReactCSSTransitionReplace>
+                    </div>
+                </CSSTransition>
             </div>
         )
     };

@@ -7,11 +7,11 @@ class Language extends Component {
         return(
             <div className='language-box'>
                 <button 
-                    onClick={App.language==='pl'? App.toggleLanguage() : null} 
+                    onClick={App.language==='pl'? ()=>App.toggleLanguage() : null} 
                     className={"language-btn" + (App.language === 'en' ? " active" : '')}>
-                    EN</button>
+                    EN</button> 
                 <button 
-                    onClick={App.language==='en'? App.toggleLanguage() : null} 
+                    onClick={App.language==='en'? ()=>App.toggleLanguage() : null} 
                     className={"language-btn" + (App.language === 'pl' ? " active" : '')}
                     >PL</button>
             </div>

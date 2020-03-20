@@ -1,128 +1,129 @@
-.values{
+
+$transition-duration-long:400ms;
+$transition-duration-short:150ms;
+
+
+
+
+// .value-text-frame{
+//     border-bottom: 2px solid rgba($color-yellow,.3);
+//     border-top: 2px solid rgba($color-yellow,.3);
+//     position: absolute;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     font-size:1.6rem;
+
+//     @media only screen and (max-width:600px) {
+//         font-size: 1.4rem;
+//     }
+
+//     @media only screen and (max-width:400px) {
+//         font-size: 1.2rem;
+//     }
+ 
+ 
+// }
+// .value-text-box{
+//     height: 20rem;
+//     position: relative;
+//     transition: all .3s;
+
+//     @media only screen and (max-width:470px){
+//        height: 23rem;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+//   /////////////////////////////////////////////////////////////////////////@at-root
+.my-node-enter {
+    opacity: 0;
+    height: 0;
+}
+  .my-node-enter-active {
+    opacity: 1;
+    height: 20rem;
+    transition: height $transition-duration-long, opacity $transition-duration-long $transition-duration-long;
+  }
+  .my-node-enter-done{
+      height: 20rem;
+
+
+  }
+  .my-node-exit {
+    opacity: 1;
+    height: 20rem;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    height: 0;
+    transition: opacity $transition-duration-long, height $transition-duration-long $transition-duration-long;
+  }
+
+  .cross-fade-leave {
+    opacity: 1;
+   
+  }
+  .cross-fade-leave-active {
+    opacity: 0;
+    transform: scale(.9);
+    transition: all $transition-duration-short ;
+   
+  }
+  
+  .cross-fade-enter {
+    opacity: 0;
+    transform: scale(.9);
+    
+  }
+  .cross-fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all $transition-duration-short $transition-duration-short;
+    
+  }
+  .cross-fade-height{
+      height: 100%;
+    //   overflow: visible;
+  }
+.values-circles{
     display: flex;
     justify-content: space-between;
  
 }
 .values-box{
+    font-size: 1.6rem;
     width: 80rem;
-    position: relative;
+    
+    // background-color: green;
    
     @media only screen and (max-width:830px){
         // display: flex;
         width: 90vw;
     }
-  
-}
-
-
-
-
-
-
-.value-text-frame{
-    border-bottom: 2px solid rgba($color-yellow,.3);
-    border-top: 2px solid rgba($color-yellow,.3);
-    position: absolute;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size:1.6rem;
-
     @media only screen and (max-width:600px) {
         font-size: 1.4rem;
     }
-
+        
     @media only screen and (max-width:400px) {
         font-size: 1.2rem;
     }
- 
- 
-}
-.value-text-box{
-    height: 20rem;
-    position: relative;
-    transition: all .3s;
-
-    @media only screen and (max-width:470px){
-       height: 23rem;
-    }
-}
-
-.hight-none{
-    height: 0;
-}
-
-
-
-
-.fade-appear{
-    
-    opacity: 0;
-    z-index: 1;
-}
-.fade-appear.fade-appear-active{
-   
-    opacity: 1;
-    transition: all 1000ms linear;
-}
-
-.fade-enter {
-    opacity: 0;
-    z-index: 1;
-  }
-  .fade-enter.fade-enter-active {
-      opacity: 1;
-      transition: opacity 250ms linear 250ms;
-  }
   
-  /* exit */
-  .fade-exit {
-      opacity: 1;
-  }
-  .fade-exit.fade-exit-active {
-      opacity: 0;
-      transition: opacity 250ms linear;
-  }
-  .fade-exit-done {
-    opacity: 0;
-  }
-
-
-
-
-  .slide-appear{
-    
-    opacity: 0;
-    z-index: 1;
 }
-.slide-appear.slide-appear-active{
-   
-    opacity: 1;
-    transition: all 500ms linear;
+.values-text{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba($color-yellow,.3);
+    border-top: 2px solid rgba($color-yellow,.3);
+   box-sizing: border-box; 
 }
 
-  .slide-enter {
-    opacity: 0;
-    transform: scale(0.97) translateY(5px);
-    z-index: 1;
-  }
-  .slide-enter.slide-enter-active {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-      transition: opacity 300ms linear 100ms, transform 300ms ease-in-out 100ms;
-  }
-  
-  /* slide exit */
-  .slide-exit {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-      
-  }
-  .slide-exit.slide-exit-active {
-      opacity: 0;
-      transform: scale(0.97) translateY(5px);
-      transition: opacity 150ms linear, transform 150ms ease-out;
-  }
-  .slide-exit-done {
-    opacity: 0;
-  }

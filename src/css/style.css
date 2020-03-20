@@ -232,100 +232,72 @@ body {
     .about-text {
       font-size: 1.5rem; } }
 
-.values {
+.my-node-enter {
+  opacity: 0;
+  height: 0; }
+
+.my-node-enter-active {
+  opacity: 1;
+  height: 20rem;
+  transition: height 400ms, opacity 400ms 400ms; }
+
+.my-node-enter-done {
+  height: 20rem; }
+
+.my-node-exit {
+  opacity: 1;
+  height: 20rem; }
+
+.my-node-exit-active {
+  opacity: 0;
+  height: 0;
+  transition: opacity 400ms, height 400ms 400ms; }
+
+.cross-fade-leave {
+  opacity: 1; }
+
+.cross-fade-leave-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 150ms; }
+
+.cross-fade-enter {
+  opacity: 0;
+  transform: scale(0.9); }
+
+.cross-fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 150ms 150ms; }
+
+.cross-fade-height {
+  height: 100%; }
+
+.values-circles {
   display: flex;
   justify-content: space-between; }
 
 .values-box {
-  width: 80rem;
-  position: relative; }
+  font-size: 1.6rem;
+  width: 80rem; }
   @media only screen and (max-width: 830px) {
     .values-box {
       width: 90vw; } }
-
-.value-text-frame {
-  border-bottom: 2px solid rgba(200, 157, 102, 0.3);
-  border-top: 2px solid rgba(200, 157, 102, 0.3);
-  position: absolute;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem; }
   @media only screen and (max-width: 600px) {
-    .value-text-frame {
+    .values-box {
       font-size: 1.4rem; } }
   @media only screen and (max-width: 400px) {
-    .value-text-frame {
+    .values-box {
       font-size: 1.2rem; } }
 
-.value-text-box {
-  height: 20rem;
-  position: relative;
-  transition: all .3s; }
-  @media only screen and (max-width: 470px) {
-    .value-text-box {
-      height: 23rem; } }
-
-.hight-none {
-  height: 0; }
-
-.fade-appear {
-  opacity: 0;
-  z-index: 1; }
-
-.fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: all 1000ms linear; }
-
-.fade-enter {
-  opacity: 0;
-  z-index: 1; }
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms linear 250ms; }
-
-/* exit */
-.fade-exit {
-  opacity: 1; }
-
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transition: opacity 250ms linear; }
-
-.fade-exit-done {
-  opacity: 0; }
-
-.slide-appear {
-  opacity: 0;
-  z-index: 1; }
-
-.slide-appear.slide-appear-active {
-  opacity: 1;
-  transition: all 500ms linear; }
-
-.slide-enter {
-  opacity: 0;
-  transform: scale(0.97) translateY(5px);
-  z-index: 1; }
-
-.slide-enter.slide-enter-active {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  transition: opacity 300ms linear 100ms, transform 300ms ease-in-out 100ms; }
-
-/* slide exit */
-.slide-exit {
-  opacity: 1;
-  transform: scale(1) translateY(0); }
-
-.slide-exit.slide-exit-active {
-  opacity: 0;
-  transform: scale(0.97) translateY(5px);
-  transition: opacity 150ms linear, transform 150ms ease-out; }
-
-.slide-exit-done {
-  opacity: 0; }
+.values-text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(200, 157, 102, 0.3);
+  border-top: 2px solid rgba(200, 157, 102, 0.3);
+  box-sizing: border-box; }
 
 .value-box {
   width: 15rem;

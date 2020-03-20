@@ -9,7 +9,7 @@ import { IntlProvider } from 'react-intl';
 // import messages_pl from "./common/pl.json";
 // import messages_en from "./common/en.json";
 import TextService from './common/TextService'
-// const axios = require('axios');
+const axios = require('axios');
 
 class App extends Component {
     constructor() {
@@ -24,30 +24,9 @@ class App extends Component {
     componentDidMount = async () => {
         var messages = await this.textService.getTextFromBackend();
         this.setState({ messages: messages });
-        console.log(messages);
-        // this.downloadLanguages();
-
-    }
-
-
-    // downloadLanguages = () => {
-    //     var list = [];
-    //     var keys = Object.keys(messages_en);
-    //     for (var i = 0; i < keys.length; i++) {
-    //         var key = keys[i];
-    //         list.push({
-    //             key: key,
-    //             pl: messages_pl[key],
-    //             en: messages_en[key]
-    //         });
-    //     }
-    //     console.log(list);
-    //     axios.post('http://localhost:5000/text',list);
-    // }
-    
-
+    }  
     toggleLanguage = () => {
-        const newLanguage = this.state.language === "pl" ? "en" : "pl";
+        const newLanguage = this.state.language == "pl" ? "en" : "pl";
         App.language = newLanguage;
         this.setState({
             language: newLanguage
@@ -58,7 +37,7 @@ class App extends Component {
             return (
                 <IntlProvider locale={this.state.language} messages={this.state.messages[this.state.language]}>
                     <NavigationBar />
-                    <Header />
+                    <Header  />
                     <AboutSection />
                     <ServicesSection />
                     {/* <ProjectsSection /> */}
