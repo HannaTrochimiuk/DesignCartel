@@ -232,45 +232,63 @@ body {
     .about-text {
       font-size: 1.5rem; } }
 
-.my-node-enter {
+.appear-enter {
   opacity: 0;
   height: 0; }
 
-.my-node-enter-active {
+.appear-enter-active {
   opacity: 1;
   height: 20rem;
   transition: height 400ms, opacity 400ms 400ms; }
+  @media only screen and (max-width: 455px) {
+    .appear-enter-active {
+      height: 22rem; } }
+  @media only screen and (max-width: 400px) {
+    .appear-enter-active {
+      height: 24rem; } }
 
-.my-node-enter-done {
+.appear-enter-done {
   height: 20rem; }
+  @media only screen and (max-width: 455px) {
+    .appear-enter-done {
+      height: 22rem; } }
+  @media only screen and (max-width: 400px) {
+    .appear-enter-done {
+      height: 24rem; } }
 
-.my-node-exit {
+.appear-exit {
   opacity: 1;
   height: 20rem; }
+  @media only screen and (max-width: 455px) {
+    .appear-exit {
+      height: 22rem; } }
+  @media only screen and (max-width: 400px) {
+    .appear-exit {
+      height: 24rem; } }
 
-.my-node-exit-active {
+.appear-exit-active {
   opacity: 0;
   height: 0;
   transition: opacity 400ms, height 400ms 400ms; }
 
-.cross-fade-leave {
+.replace-leave {
   opacity: 1; }
 
-.cross-fade-leave-active {
+.replace-leave-active {
   opacity: 0;
   transform: scale(0.9);
   transition: all 150ms; }
 
-.cross-fade-enter {
+.replace-enter {
   opacity: 0;
   transform: scale(0.9); }
 
-.cross-fade-enter-active {
+.replace-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: all 150ms 150ms; }
 
-.cross-fade-height {
+.replace-height {
   height: 100%; }
 
 .values-circles {
@@ -361,11 +379,11 @@ body {
         width: 7rem;
         height: 7rem; } }
     .value-box__side--front {
-      background-color: #c89d66;
+      background-image: linear-gradient(to right bottom, #e4be8d, #c89d66);
       z-index: 1000;
       color: #fff; }
     .value-box__side--back {
-      background-color: #a18a7a;
+      background-image: linear-gradient(to right bottom, #bbaba0, #a18a7a);
       transform: rotateY(180deg);
       color: #fff; }
 

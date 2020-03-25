@@ -8,7 +8,6 @@
         width: 12rem;
         height: 12rem;
     }
-
     @media only screen and (max-width:540px){
         width: 10rem;
         height: 10rem;
@@ -25,11 +24,8 @@
         width: 7rem;
         height:7rem;
     }
-  
-   
     
     &__side{
-  
         box-shadow: 0 1rem 1rem rgba(black,.2);
         height: 15rem;
         width: 15rem;
@@ -65,27 +61,18 @@
             height:7rem;
         }
         
-       
-        
-
         &--front{
-            background-color: $color-yellow;
+            background-image: linear-gradient(to right bottom, #e4be8d,$color-yellow);
             z-index: 1000;
             color: $color-white;
         }
 
         &--back{
-            background-color: $color-brown;
+            background-image: linear-gradient(to right bottom, #bbaba0,$color-brown);
             transform: rotateY(180deg);
-            color: $color-white;
-            
-           
-            
-            
-            
+            color: $color-white;     
         }
     }
-
 }
 .pl{
     font-size: 2rem;
@@ -116,13 +103,10 @@
 }
 
 .value-box-active .value-box__side--front{
-    
     transform:  rotateY(-180deg);
-
 }
 .value-box-active .value-box__side--back{
     transform:  rotateY(0deg);
-    
 }
 
 .svg-size{

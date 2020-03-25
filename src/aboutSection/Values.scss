@@ -1,98 +1,60 @@
-
 $transition-duration-long:400ms;
 $transition-duration-short:150ms;
+        
+@mixin frame-height() {
+  height: 20rem;
+  @media only screen and (max-width: 455px) {
+    height: 22rem;
+}
+  @media only screen and (max-width: 400px) {
+      height: 24rem;
+  }
+}
 
-
-
-
-// .value-text-frame{
-//     border-bottom: 2px solid rgba($color-yellow,.3);
-//     border-top: 2px solid rgba($color-yellow,.3);
-//     position: absolute;
-//     height: 100%;
-//     display: flex;
-//     align-items: center;
-//     font-size:1.6rem;
-
-//     @media only screen and (max-width:600px) {
-//         font-size: 1.4rem;
-//     }
-
-//     @media only screen and (max-width:400px) {
-//         font-size: 1.2rem;
-//     }
- 
- 
-// }
-// .value-text-box{
-//     height: 20rem;
-//     position: relative;
-//     transition: all .3s;
-
-//     @media only screen and (max-width:470px){
-//        height: 23rem;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-//   /////////////////////////////////////////////////////////////////////////@at-root
-.my-node-enter {
+.appear-enter {
     opacity: 0;
     height: 0;
 }
-  .my-node-enter-active {
+  .appear-enter-active {
     opacity: 1;
-    height: 20rem;
+    @include frame-height();
     transition: height $transition-duration-long, opacity $transition-duration-long $transition-duration-long;
   }
-  .my-node-enter-done{
-      height: 20rem;
-
-
+  .appear-enter-done{
+    @include frame-height();
   }
-  .my-node-exit {
+  .appear-exit {
     opacity: 1;
-    height: 20rem;
+    @include frame-height();
   }
-  .my-node-exit-active {
+  .appear-exit-active {
     opacity: 0;
     height: 0;
     transition: opacity $transition-duration-long, height $transition-duration-long $transition-duration-long;
   }
 
-  .cross-fade-leave {
+ 
+  .replace-leave {
     opacity: 1;
-   
   }
-  .cross-fade-leave-active {
+  .replace-leave-active {
     opacity: 0;
     transform: scale(.9);
     transition: all $transition-duration-short ;
-   
   }
-  
-  .cross-fade-enter {
+  .replace-enter {
     opacity: 0;
     transform: scale(.9);
-    
   }
-  .cross-fade-enter-active {
+  .replace-enter-active {
     opacity: 1;
     transform: scale(1);
     transition: all $transition-duration-short $transition-duration-short;
-    
   }
-  .cross-fade-height{
+  .replace-height{
       height: 100%;
-    //   overflow: visible;
   }
+
 .values-circles{
     display: flex;
     justify-content: space-between;
@@ -100,12 +62,8 @@ $transition-duration-short:150ms;
 }
 .values-box{
     font-size: 1.6rem;
-    width: 80rem;
-    
-    // background-color: green;
-   
+    width: 80rem;   
     @media only screen and (max-width:830px){
-        // display: flex;
         width: 90vw;
     }
     @media only screen and (max-width:600px) {
