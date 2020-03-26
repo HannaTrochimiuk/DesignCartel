@@ -1,0 +1,55 @@
+.service{
+    display: flex;
+    // width: 100%;
+    @media only screen and (max-width:890px){
+        flex-direction: column;
+    }
+}
+
+.service-foto{
+    width: 50%;
+    height:35rem;
+    background-size: cover;
+    background-position: center;
+    @media only screen and (max-width:990px){
+        height: 40rem;
+    }
+    @media only screen and (max-width:890px){
+        width: 100%;
+        height: 25rem;
+    }
+}
+.service-text-box{
+    width: 50%;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (max-width:890px){
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    &--textFirst{
+        text-align: right;
+        order:-1;
+        @media only screen and (max-width:890px){
+            order: 2;
+            text-align: left;
+        }
+    }
+}
+.service-title{
+    font-size: 5rem;
+    padding: 0 2rem;
+    @media only screen and (max-width:1060px){
+        font-size: 3.5rem;
+    }
+}
+
+.service-text{
+    padding: 0 2rem;
+    font-size: 1.5rem;
+}
+
+

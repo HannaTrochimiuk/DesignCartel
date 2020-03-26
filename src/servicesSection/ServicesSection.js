@@ -1,64 +1,41 @@
 import React, { Component } from 'react';
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
+import Service from './Service';
 
 class ServicesSection extends Component {
+    content = [{
+        foto: 'url(http://localhost:5000/słońce.png)',
+        idTitle: 'servicesSpace',
+        idText: 'servicesTextSpace',
+        textFirst:false
+    },{
+        foto: 'url(http://localhost:5000/strzałka.png)',
+        idTitle: 'servicesWayfinding',
+        idText: 'servicesTextWayfinding',
+        textFirst:true
+    },{
+        foto: 'url(http://localhost:5000/serce.png)',
+        idTitle: 'servicesPersonalization',
+        idText: 'servicesTextPersonalization',
+        textFirst:false
+    },{
+        foto: 'url(http://localhost:5000/korona.png)',
+        idTitle: 'servicesIdentyfication',
+        idText: 'servicesTextIdentyfication',
+        textFirst:true
+    }]
     render() {
         return (
             <section className="services-section">
                 <div className="title-box">
                     <h1 className="title">
-                        <FormattedMessage id="menuServices"/>
+                        <FormattedMessage id="menuServices" />
                     </h1>
                 </div>
-                <div className="service">
-                    <div className="service-foto service-foto--1"></div>
-                    <div className="service-text-box service-text-box--left">
-                        <div className="service-title">
-                            <FormattedMessage id="servicesSpace"/>
-                        </div>
-                        <div className="service-text">
-                            <FormattedMessage id="servicesTextSpace"/>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div className="service">
-                        <div className="service-text-box service-text-box--right">
-                            <div className="service-title">
-                                <FormattedMessage id="servicesWayfinding"/>
-                            </div>
-                            <div className="service-text">
-                                <FormattedMessage id="servicesTextSpace"/>
-                            </div>
-                        </div>
-                        <div className="service-foto service-foto--2"></div>
-                    </div>
-
-                    <div className="service">
-                        <div className="service-foto service-foto--3"></div>
-                        <div className="service-text-box service-text-box--left">
-                            <div className="service-title">
-                                <FormattedMessage id="servicesPersonalization"/>
-                            </div>
-                            <div className="service-text">
-                                <FormattedMessage id="servicesTextPersonalization"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="service">
-                        <div className="service-text-box service-text-box--right">
-                            <div className="service-title">
-                                <FormattedMessage id="servicesIdentyfication"/>
-                            </div>
-                            <div className="service-text">
-                                <FormattedMessage id="servicesTextIdentyfication"/>
-                            </div>
-                        </div>
-                        <div className="service-foto service-foto--4"></div>
-                    </div>
+                {this.content.map(el => <Service element={el} />)}
             </section>
-                )
-            };
-        }
-        
+        )
+    };
+}
+
 export default ServicesSection;
