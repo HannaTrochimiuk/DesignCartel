@@ -32,7 +32,7 @@ class ServicesSection extends Component {
                         <FormattedMessage id="menuServices" />
                     </h1>
                 </div>
-                {this.content.map(el => <Service element={el} />)}
+                {this.content.map(el => <Service key={el.idTitle} element={el} />)}
             </section>
         )
     };

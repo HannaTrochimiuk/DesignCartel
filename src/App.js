@@ -40,7 +40,7 @@ class App extends Component {
                     <Header  />
                     <AboutSection />
                     <ServicesSection />
-                    {/* <ProjectsSection /> */}
+                    <ProjectsSection />
                     <Contact />
                 </IntlProvider>
             );

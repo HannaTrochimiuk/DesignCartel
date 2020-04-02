@@ -22,7 +22,12 @@
     }
     
 }
-
+@mixin projectHeight {
+    height: 35rem;
+    @media only screen and (max-width:600px){
+        height: 20rem;
+    }
+}
 .project-box{
     border: none;
     outline: none;
@@ -32,11 +37,8 @@
     overflow: hidden;  
     cursor: pointer;
       
-    animation: showProject .5s;
-    @media only screen and (max-width:600px){
-        height: 20rem;
-        
-    }
+    // animation: showProject .5s;
+   @include projectHeight();
 }
 
 

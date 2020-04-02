@@ -496,6 +496,37 @@ body {
   width: 100%;
   flex-wrap: wrap; }
 
+.appearProjects-enter {
+  opacity: 0;
+  height: 0; }
+
+.appearProjects-enter-active {
+  opacity: 1;
+  height: 35rem;
+  transition: height .3s, opacity .3s .3s; }
+  @media only screen and (max-width: 600px) {
+    .appearProjects-enter-active {
+      height: 20rem; } }
+
+.appearProjects-enter-done {
+  height: 35rem;
+  opacity: 1; }
+  @media only screen and (max-width: 600px) {
+    .appearProjects-enter-done {
+      height: 20rem; } }
+
+.appearProjects-exit {
+  opacity: 1;
+  height: 35rem; }
+  @media only screen and (max-width: 600px) {
+    .appearProjects-exit {
+      height: 20rem; } }
+
+.appearProjects-exit-active {
+  opacity: 0;
+  height: 0;
+  transition: opacity .3s, height .3s .3s; }
+
 .popup {
   width: 100vw;
   height: 100vh;
@@ -685,7 +716,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  animation: showProject .5s; }
+  height: 35rem; }
   @media only screen and (max-width: 600px) {
     .project-box {
       height: 20rem; } }

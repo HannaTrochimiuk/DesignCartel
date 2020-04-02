@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
      padding: 2rem 0;
+    //  height: 130rem;
      
 }
 .projects{
@@ -11,6 +12,34 @@
     flex-wrap: wrap;
 }
 
+@mixin projectHeight {
+  height: 35rem;
+  @media only screen and (max-width:600px){
+      height: 20rem;
+  }
+}
+.appearProjects-enter {
+    opacity: 0;
+    height: 0;
+}
+  .appearProjects-enter-active {
+    opacity: 1;
+    @include projectHeight;
+    transition: height .3s, opacity .3s .3s;
+  }
+  .appearProjects-enter-done{
+    @include projectHeight;
+    opacity:1;
+  }
+  .appearProjects-exit {
+    opacity: 1;
+    @include projectHeight;
+  }
+  .appearProjects-exit-active {
+    opacity: 0;
+    height: 0;
+    transition: opacity .3s, height .3s .3s;
+  }
 
 
 
