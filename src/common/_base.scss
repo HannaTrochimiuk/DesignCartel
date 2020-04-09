@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-family: "Montserrat";
 }
 
 html{
@@ -11,7 +12,7 @@ html{
 }
 
 body {
-  font-family: "Montserrat";
+  
   font-weight: 300;
   color: $color-grey-1;
   font-size: 2rem;
