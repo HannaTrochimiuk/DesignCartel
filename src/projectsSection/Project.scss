@@ -13,12 +13,12 @@
 .project-box{
     border: none;
     outline: none;
-    height: 35rem;
     width: 100%;
     position: relative;
     overflow: hidden;  
     cursor: pointer;
       
+    height: 35rem;
     @media only screen and (max-width:600px){
         height: 20rem;
     }

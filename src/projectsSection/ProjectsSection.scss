@@ -23,7 +23,7 @@
   .appearProjects-enter-active {
     opacity: 1;
     @include projectHeight;
-    transition: height 3s, opacity 3s 3s;
+    transition: height .5s, opacity .5s .5s;
   }
   .appearProjects-enter-done{
     @include projectHeight;
@@ -36,7 +36,7 @@
   .appearProjects-exit-active {
     opacity: 0;
     height: 0;
-    transition: opacity 3s, height 3s 3s;
+    transition: opacity .5s, height .5s .5s;
   }
 .show-projects-btn{
   background-color: transparent;

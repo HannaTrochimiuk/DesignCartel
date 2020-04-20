@@ -9,7 +9,7 @@ import { IntlProvider } from 'react-intl';
 // import messages_pl from "./common/pl.json";
 // import messages_en from "./common/en.json";
 import TextService from './common/TextService'
-const axios = require('axios');
+// const axios = require('axios');
 
 class App extends Component {
     constructor() {

@@ -63,36 +63,33 @@ class ProjectsSection extends Component {
                     </h1>
                 </div>
                 <div className="projects">
-                    {
-                        this.state.visibleProjects.map((project) => {
-                            return  <Project
+                    {this.state.visibleProjects.map((project) => {
+                        return <Project
+                            key={project.name}
+                            project={project}
+                            onSelected={() => this.showPopup(project)} />
+                    })}
+                    {this.state.hiddenProjects.map((project) => {
+                        return (
+                            <CSSTransition
                                 key={project.name}
-                                project={project}
-                                onSelected={() => this.showPopup(project)} />
-                        })
-                    }{
-                        this.state.hiddenProjects.map((project) => {
-                            return (
-                                <CSSTransition
-                                    key={project.name}
-                                    in={this.state.showAllProjects}
-                                    timeout={600}
-                                    classNames='appearProjects'
-                                    unmountOnExit>
-                                    <Project
-                                        project={project}
-                                        onSelected={() => this.showPopup(project)} />
-                                </CSSTransition>)
-                        })
-                    }
+                                in={this.state.showAllProjects}
+                                timeout={1000}
+                                classNames='appearProjects'
+                                unmountOnExit>
+                                <Project
+                                    project={project}
+                                    onSelected={() => this.showPopup(project)} />
+                            </CSSTransition>)
+                    })}
                 </div>
                 <button className='show-projects-btn' onClick={this.showAllProjects}>
-                    <img className={this.state.showAllProjects ? 'arrow flip' : 'arrow'} src={arrowDown} />
+                    <img alt='arrow' className={this.state.showAllProjects ? 'arrow flip' : 'arrow'} src={arrowDown} />
                 </button>
                 <Popup
                     in={this.state.showPopup}
                     project={this.state.selectedProject}
-                    closing={this.closePopup} />
+                    closePopup={this.closePopup} />
             </div>
         )
     };
