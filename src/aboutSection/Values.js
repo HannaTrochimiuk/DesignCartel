@@ -8,8 +8,6 @@ import { FormattedMessage } from 'react-intl'
 import { CSSTransition } from 'react-transition-group';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
 
-
-
 class Values extends Component {
     constructor() {
         super();

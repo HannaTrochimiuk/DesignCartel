@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import App from '../App.js';
 
-
 class Language extends Component {
     render() {
         return(
@@ -15,7 +14,6 @@ class Language extends Component {
                     className={"language-btn" + (App.language === 'pl' ? " active" : '')}
                     >PL</button>
             </div>
-            
         )
     }
 }

@@ -26,6 +26,15 @@ class Gallery extends Component {
             index: id
         })
     }
+    
+    changeStrings = (infix) =>{
+        var filesNames =  this.props.project.fileNames;
+        filesNames = filesNames.map(element => { 
+            return('http://localhost:5000/' + element.replace('.',infix));
+        });
+        return filesNames;
+        
+    }
     render() {
         return (
             <div>
@@ -34,12 +43,12 @@ class Gallery extends Component {
                         'transform': `translateX(-${this.state.index * 100}%)`
                     }}>
 
-                    {this.props.project.fileNames.map(fileName =>
+                    {this.changeStrings(this.props.galleryImgInfix).map(fileName =>
                         <img 
                             key={fileName} 
                             alt='foto' 
                             className='gallery-foto' 
-                            src={`http://localhost:5000/${fileName}`} />)}
+                            src={fileName} />)}
                 </div>
                 <button
                     onClick={this.showPrev}
@@ -58,11 +67,11 @@ class Gallery extends Component {
                         'transform': `translateX(-${this.state.index * 7}vw)`
                     }}>
                     {
-                        this.props.project.fileNames.map((fileName, index) =>
+                        this.changeStrings('_w220.').map((fileName, index) =>
                             <button  key={fileName} onClick={() => this.showIdFoto(index)} className='thumbnail-btn'>
                                 <img
                                     className={this.state.index === index ? 'gallery-foto-thumbnail gallery-foto-thumbnail--active' : 'gallery-foto-thumbnail'}
-                                    src={`http://localhost:5000/${fileName}`}
+                                    src={fileName}
                                     alt='foto' />
                             </button>)
                     }

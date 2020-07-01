@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl'
 import Service from './Service';
+import serce from '../img/serce.png';
+import strzałka from '../img/strzałka.png';
+import korona from '../img/korona.png';
+import słońce from '../img/słońce.png';
+
 
 class ServicesSection extends Component {
     content = [{
-        foto: 'url(http://localhost:5000/słońce.png)',
+        foto: słońce,
         idTitle: 'servicesSpace',
         idText: 'servicesTextSpace',
-        textFirst:false
-    },{
-        foto: 'url(http://localhost:5000/strzałka.png)',
+        textFirst: false
+    }, {
+        foto: strzałka,
         idTitle: 'servicesWayfinding',
         idText: 'servicesTextWayfinding',
-        textFirst:true
-    },{
-        foto: 'url(http://localhost:5000/serce.png)',
+        textFirst: true
+    }, {
+        foto: serce,
         idTitle: 'servicesPersonalization',
         idText: 'servicesTextPersonalization',
-        textFirst:false
-    },{
-        foto: 'url(http://localhost:5000/korona.png)',
+        textFirst: false
+    }, {
+        foto: korona,
         idTitle: 'servicesIdentyfication',
         idText: 'servicesTextIdentyfication',
-        textFirst:true
+        textFirst: true
     }]
     render() {
         return (

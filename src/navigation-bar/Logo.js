@@ -11,7 +11,7 @@ class Logo extends Component {
     render() {
         return (
             <button onClick={this.scrollToTop } className='logo-nav-bar-box'>
-                <img src={logo} className='logo-nav-bar' alt='error' />
+                <img src={logo} className='logo-nav-bar' alt='logo' />
             </button>
         );
     }

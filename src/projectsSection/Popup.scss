@@ -81,16 +81,16 @@
   position: relative;
 
   @media only screen and (max-width: 700px) {
-    width: 70vw;
+    width: 65vw;
   }
 
   @media only screen and (max-width: 600px) {
     order: 2;
-    width: 90vw;
+    width: 88vw;
   }
 
   @media only screen and (max-aspect-ratio: 5/4) and (max-width: 1000px) {
-    width: 90vw;
+    width: 88vw;
     order: 2;
   }
 }

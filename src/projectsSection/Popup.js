@@ -35,7 +35,9 @@ class Popup extends Component {
                         {this.props.project ?
                             <div ref={this.setWrapperRef} className='popup-content'>
                                 <div className='popup-content-left'>
-                                    <Gallery project={this.props.project} />
+                                    <Gallery 
+                                        project={this.props.project}
+                                        galleryImgInfix={this.props.galleryImgInfix} />
                                 </div>
                                 <div className='popup-content-right'>
                                     <div className='popup-title'>{this.props.project.name}</div>
@@ -46,12 +48,12 @@ class Popup extends Component {
                                     </button>
                                 </div>
                             </div> :
-                            <div/>}
+                            <div />}
                     </CSSTransition >
                 </div>
             </CSSTransition >
         )
-    }  
+    }
 }
 
 export default Popup;

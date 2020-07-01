@@ -32,10 +32,15 @@ class ProjectsSection extends Component {
 
 
     updateWindowDimension = () => {
-        var projectsCount = window.innerWidth < 400 ? 3 : 6;
+        const windowWidth = window.innerWidth;
+        var projectsCount = windowWidth < 400 ? 3 : 6;
+        var projectImgInfix = windowWidth > 2160 ? '_w1152.' : '_w720.';
+        var galleryImgInfix = windowWidth > 2000 ? '_w1920.' : windowWidth > 1300 ? '_w1152.' :  '_w720.' ;
         this.setState({
             visibleProjects: this.state.projects.slice(0, projectsCount),
-            hiddenProjects: this.state.projects.slice(projectsCount)
+            hiddenProjects: this.state.projects.slice(projectsCount),
+            projectImgInfix: projectImgInfix,
+            galleryImgInfix: galleryImgInfix
         });
     }
 
@@ -67,7 +72,8 @@ class ProjectsSection extends Component {
                         return <Project
                             key={project.name}
                             project={project}
-                            onSelected={() => this.showPopup(project)} />
+                            onSelected={() => this.showPopup(project)}
+                            projectImgInfix={this.state.projectImgInfix} />
                     })}
                     {this.state.hiddenProjects.map((project) => {
                         return (
@@ -79,7 +85,8 @@ class ProjectsSection extends Component {
                                 unmountOnExit>
                                 <Project
                                     project={project}
-                                    onSelected={() => this.showPopup(project)} />
+                                    onSelected={() => this.showPopup(project)}
+                                    projectImgInfix={this.state.projectImgInfix} />
                             </CSSTransition>)
                     })}
                 </div>
@@ -89,7 +96,9 @@ class ProjectsSection extends Component {
                 <Popup
                     in={this.state.showPopup}
                     project={this.state.selectedProject}
-                    closePopup={this.closePopup} />
+                    closePopup={this.closePopup}
+                    gallertImgInfix={this.state.gallertImgInfix}
+                    galleryImgInfix={this.state.galleryImgInfix} />
             </div>
         )
     };

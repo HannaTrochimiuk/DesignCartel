@@ -45,10 +45,22 @@
   &--active {
     outline: 3px solid $color-yellow;
     outline-offset: -3px;
+
+    @media only screen and (max-width:850px){
+      width: 10vw;
+    }
     @media only screen and(max-width:600px) {
       outline: 1px solid $color-yellow;
       outline-offset: -1px;
+      width: 12vw;
     }
+  
+  }
+  @media only screen and (max-width:850px){
+    width: 10vw;
+  }
+  @media only screen and (max-width:600px){
+    width: 12vw;
   }
 }
 .thumbnail-btn {

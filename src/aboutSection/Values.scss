@@ -1,87 +1,83 @@
-$transition-duration-long:400ms;
-$transition-duration-short:150ms;
-        
+$transition-duration-long: 400ms;
+$transition-duration-short: 150ms;
+
 @mixin frame-height() {
   height: 20rem;
   @media only screen and (max-width: 455px) {
     height: 22rem;
-}
+  }
   @media only screen and (max-width: 400px) {
-      height: 24rem;
+    height: 24rem;
   }
 }
 
 .appear-enter {
-    opacity: 0;
-    height: 0;
+  opacity: 0;
+  height: 0;
 }
-  .appear-enter-active {
-    opacity: 1;
-    @include frame-height();
-    transition: height $transition-duration-long, opacity $transition-duration-long $transition-duration-long;
-  }
-  .appear-enter-done{
-    @include frame-height();
-  }
-  .appear-exit {
-    opacity: 1;
-    @include frame-height();
-  }
-  .appear-exit-active {
-    opacity: 0;
-    height: 0;
-    transition: opacity $transition-duration-long, height $transition-duration-long $transition-duration-long;
-  }
-
- 
-  .replace-leave {
-    opacity: 1;
-  }
-  .replace-leave-active {
-    opacity: 0;
-    transform: scale(.9);
-    transition: all $transition-duration-short ;
-  }
-  .replace-enter {
-    opacity: 0;
-    transform: scale(.9);
-  }
-  .replace-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: all $transition-duration-short $transition-duration-short;
-  }
-  .replace-height{
-      height: 100%;
-  }
-
-.values-circles{
-    display: flex;
-    justify-content: space-between;
- 
+.appear-enter-active {
+  opacity: 1;
+  @include frame-height();
+  transition: height $transition-duration-long, opacity $transition-duration-long $transition-duration-long;
 }
-.values-box{
-    font-size: 1.6rem;
-    width: 80rem;   
-    @media only screen and (max-width:830px){
-        width: 90vw;
-    }
-    @media only screen and (max-width:600px) {
-        font-size: 1.4rem;
-    }
-        
-    @media only screen and (max-width:400px) {
-        font-size: 1.2rem;
-    }
-  
+.appear-enter-done {
+  @include frame-height();
 }
-.values-text{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid rgba($color-yellow,.3);
-    border-top: 2px solid rgba($color-yellow,.3);
-   box-sizing: border-box; 
+.appear-exit {
+  opacity: 1;
+  @include frame-height();
+}
+.appear-exit-active {
+  opacity: 0;
+  height: 0;
+  transition: opacity $transition-duration-long, height $transition-duration-long $transition-duration-long;
 }
 
+.replace-leave {
+  opacity: 1;
+}
+.replace-leave-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all $transition-duration-short;
+}
+.replace-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.replace-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all $transition-duration-short $transition-duration-short;
+}
+.replace-height {
+  height: 100%;
+}
+
+.values-circles {
+  display: flex;
+  justify-content: space-between;
+}
+.values-box {
+  font-size: 1.6rem;
+  width: 80rem;
+  @media only screen and (max-width: 830px) {
+    width: 90vw;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    font-size: 1.2rem;
+  }
+}
+.values-text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba($color-yellow, 0.3);
+  border-top: 2px solid rgba($color-yellow, 0.3);
+  box-sizing: border-box;
+}

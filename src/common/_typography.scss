@@ -1,0 +1,19 @@
+.title {
+  font-size: 6rem;
+  font-weight: 600;
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.title-box {
+  margin: 0 -3rem;
+  background-image: url("../img/triangle.jpg");
+  background-size: cover;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
