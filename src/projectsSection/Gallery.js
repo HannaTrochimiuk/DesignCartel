@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import arrowDown from '../img/svg/back.svg';
+import App from '../App';
 
 
 class Gallery extends Component {
@@ -30,7 +31,7 @@ class Gallery extends Component {
     changeStrings = (infix) =>{
         var filesNames =  this.props.project.fileNames;
         filesNames = filesNames.map(element => { 
-            return('http://localhost:5000/' + element.replace('.',infix));
+            return(App.baseURL + element.replace('.',infix));
         });
         return filesNames;
         

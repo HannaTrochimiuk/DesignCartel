@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import App from '../App';
 
 class Project extends Component {
    
     changeString = () =>{
         const fileName =  this.props.project.fileNames[0];
-        return('url(http://localhost:5000/' + fileName.replace('.',this.props.projectImgInfix) + ')');
+        console.log(App.baseURL);
+        return('url(' + App.baseURL + fileName.replace('.',this.props.projectImgInfix) + ')');
         
     }
     render() {

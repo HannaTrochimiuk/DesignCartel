@@ -1,9 +1,10 @@
+import App from '../App';
 
 const axios = require('axios');
 
 class TextService {
     getTextFromBackend = () => {
-        return axios.get('http://localhost:5000/text')
+        return axios.get(App.baseURL + 'text')
             .then(function (res) {
                 return res.data;
             });
