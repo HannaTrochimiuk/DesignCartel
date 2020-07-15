@@ -1,9 +1,10 @@
+import App from '../App';
 
 const axios = require('axios');
 
 class ProjectService {
     getProjectsFromBackend = () => {
-         return axios.get('http://localhost:5000/projects')
+         return axios.get(App.baseURL + 'projects')
             .then(function(res) {
                 return res.data;
             });

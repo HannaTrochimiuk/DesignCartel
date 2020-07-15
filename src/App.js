@@ -6,8 +6,6 @@ import ServicesSection from './servicesSection/ServicesSection';
 import ProjectsSection from './projectsSection/ProjectsSection';
 import Contact from './contact/Contact';
 import { IntlProvider } from 'react-intl';
-// import messages_pl from "./common/pl.json";
-// import messages_en from "./common/en.json";
 import TextService from './common/TextService'
 // const axios = require('axios');
 
@@ -16,6 +14,7 @@ class App extends Component {
         super();
         this.textService = new TextService();
         App.language = "pl";
+        App.baseURL= "https://design-cartel-backend.herokuapp.com/"
         App.toggleLanguage= this.toggleLanguage;
         this.state = {
             language: "pl"
