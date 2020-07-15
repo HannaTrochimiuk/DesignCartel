@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/people.39c75e8f.svg"
   },
   {
-    "revision": "f536d5b4264d75ea40bd",
+    "revision": "8527dfd3592aa5c9ae44",
     "url": "/DesignCartel/static/css/main.a131f2a4.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/design.0aafee99.svg"
   },
   {
-    "revision": "f536d5b4264d75ea40bd",
-    "url": "/DesignCartel/static/js/main.d03891ca.chunk.js"
+    "revision": "8527dfd3592aa5c9ae44",
+    "url": "/DesignCartel/static/js/main.a6f08da3.chunk.js"
   },
   {
     "revision": "f015950715b42d18f7c61f79c1cd6df7",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/header.4740d0bd.jpg"
   },
   {
-    "revision": "0ce0add0f7b904160cdb094354ace73c",
+    "revision": "105c23a07e798bc912508cf84f03180a",
     "url": "/DesignCartel/index.html"
   }
 ];
