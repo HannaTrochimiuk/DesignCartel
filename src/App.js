@@ -25,7 +25,7 @@ class App extends Component {
         this.setState({ messages: messages });
     }  
     toggleLanguage = () => {
-        const newLanguage = this.state.language == "pl" ? "en" : "pl";
+        const newLanguage = this.state.language === "pl" ? "en" : "pl";
         App.language = newLanguage;
         this.setState({
             language: newLanguage
@@ -44,7 +44,7 @@ class App extends Component {
                 </IntlProvider>
             );
         } else {
-            return (<div />);
+            return (<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>);
         }
     }
 }

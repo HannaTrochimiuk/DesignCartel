@@ -1,9 +1,11 @@
 .slider-wrapper {
   display: flex;
+  align-items: flex-start;
   transition: all ease-out 0.4s;
 }
 .gallery-foto {
   width: 100%;
+  flex-shrink: 0;
 }
 .arrow-btn {
   position: absolute;
