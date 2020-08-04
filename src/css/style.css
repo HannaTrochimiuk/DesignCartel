@@ -191,6 +191,8 @@ body {
   position: relative;
   transition: all 0.2s;
   background-image: url("../img/header.jpg"); }
+  .header:hover {
+    background-image: url("../img/header_bw.jpg"); }
 
 .header__text-box {
   border: 4px solid #c89d66;
