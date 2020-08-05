@@ -27,14 +27,12 @@ class Gallery extends Component {
             index: id
         })
     }
-    
-    changeStrings = (infix) =>{
-        var filesNames =  this.props.project.fileNames;
-        filesNames = filesNames.map(element => { 
-            return(App.baseURL + element.replace('.',infix));
+    changeStrings = (infix) => {
+        var filesNames = this.props.project.fileNames;
+        filesNames = filesNames.map(element => {
+            return (App.baseURL + element.replace('.', infix));
         });
         return filesNames;
-        
     }
     render() {
         return (
@@ -45,11 +43,12 @@ class Gallery extends Component {
                     }}>
 
                     {this.changeStrings(this.props.galleryImgInfix).map(fileName =>
-                        <img 
-                            key={fileName} 
-                            alt='foto' 
-                            className='gallery-foto' 
-                            src={fileName} />)}
+                        <img
+                            key={fileName}
+                            alt='foto'
+                            className='gallery-foto'
+                            src={fileName} />
+                    )}
                 </div>
                 <button
                     onClick={this.showPrev}
@@ -61,7 +60,7 @@ class Gallery extends Component {
                     onClick={this.showNext}
                     disabled={this.state.index === this.props.project.fileNames.length - 1}
                     className='arrow-btn arrow-btn--next'>
-                    <img alt ='arrow' className='arrow-icon arrow-icon--next' src={arrowDown} />
+                    <img alt='arrow' className='arrow-icon arrow-icon--next' src={arrowDown} />
                 </button>
                 <div className='slider-wrapper slider-wrapper--thumbnails'
                     style={{
@@ -69,7 +68,7 @@ class Gallery extends Component {
                     }}>
                     {
                         this.changeStrings('_w220.').map((fileName, index) =>
-                            <button  key={fileName} onClick={() => this.showIdFoto(index)} className='thumbnail-btn'>
+                            <button key={fileName} onClick={() => this.showIdFoto(index)} className='thumbnail-btn'>
                                 <img
                                     className={this.state.index === index ? 'gallery-foto-thumbnail gallery-foto-thumbnail--active' : 'gallery-foto-thumbnail'}
                                     src={fileName}

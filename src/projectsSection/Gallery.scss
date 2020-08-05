@@ -3,9 +3,11 @@
   align-items: flex-start;
   transition: all ease-out 0.4s;
 }
+
 .gallery-foto {
   width: 100%;
   flex-shrink: 0;
+  
 }
 .arrow-btn {
   position: absolute;
@@ -48,7 +50,7 @@
     outline: 3px solid $color-yellow;
     outline-offset: -3px;
 
-    @media only screen and (max-width:850px){
+    @media only screen and (max-width: 850px) {
       width: 10vw;
     }
     @media only screen and(max-width:600px) {
@@ -56,12 +58,11 @@
       outline-offset: -1px;
       width: 12vw;
     }
-  
   }
-  @media only screen and (max-width:850px){
+  @media only screen and (max-width: 850px) {
     width: 10vw;
   }
-  @media only screen and (max-width:600px){
+  @media only screen and (max-width: 600px) {
     width: 12vw;
   }
 }
