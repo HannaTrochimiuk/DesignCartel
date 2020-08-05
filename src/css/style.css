@@ -727,6 +727,29 @@ body {
     .popup-description {
       padding: 0 0rem 1rem 0rem; } }
 
+.partner-logo-container {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem; }
+  @media only screen and (max-width: 600px) {
+    .partner-logo-container {
+      padding-left: 1rem;
+      text-align: left; } }
+  @media only screen and (max-aspect-ratio: 5 / 4) and (max-width: 1000px) {
+    .partner-logo-container {
+      text-align: left;
+      padding-left: 1rem; } }
+
+.partner-logo {
+  width: 12rem;
+  cursor: pointer; }
+  @media only screen and (max-width: 1000px) {
+    .partner-logo {
+      width: 10rem; } }
+  @media only screen and (max-width: 600px) {
+    .partner-logo {
+      width: 8rem; } }
+
 .btn-exit {
   position: absolute;
   top: 1.5rem;
