@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/recycle.f0159507.png"
   },
   {
-    "revision": "8f544b96d96409fd11d0",
+    "revision": "956f899c5c1100c246ec",
     "url": "/DesignCartel/static/css/main.d0e00515.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/people.39c75e8f.svg"
   },
   {
-    "revision": "8f544b96d96409fd11d0",
-    "url": "/DesignCartel/static/js/main.47f146ea.chunk.js"
+    "revision": "956f899c5c1100c246ec",
+    "url": "/DesignCartel/static/js/main.faa881de.chunk.js"
   },
   {
     "revision": "e78b5693c4a0566d67a622f154754eca",
@@ -76,15 +76,15 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/triangle.f406896e.jpg"
   },
   {
-    "revision": "4740d0bdf90472027aa7c83fbcc3e1b1",
-    "url": "/DesignCartel/static/media/header.4740d0bd.jpg"
-  },
-  {
     "revision": "e347c704f751b73226a98f8a39244bff",
     "url": "/DesignCartel/static/media/header_bw.e347c704.jpg"
   },
   {
-    "revision": "84258f102748ea85990d81acca9b52f5",
+    "revision": "4740d0bdf90472027aa7c83fbcc3e1b1",
+    "url": "/DesignCartel/static/media/header.4740d0bd.jpg"
+  },
+  {
+    "revision": "7d02497d04b7e2766ed74a806b5aac71",
     "url": "/DesignCartel/index.html"
   }
 ];
