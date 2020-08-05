@@ -6,9 +6,9 @@
   background-position: center;
   position: relative;
   transition: all 0.2s;
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/header_bw.jpg");
   &:hover{
-    background-image: url("../img/header_bw.jpg");
+    background-image: url("../img/header.jpg");
 
   }
 } 
