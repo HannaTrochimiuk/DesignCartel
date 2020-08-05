@@ -35,7 +35,7 @@ class ProjectsSection extends Component {
         const windowWidth = window.innerWidth;
         var projectsCount = windowWidth < 400 ? 3 : 6;
         var projectImgInfix = windowWidth > 2160 ? '_w1152.' : '_w720.';
-        var galleryImgInfix = windowWidth > 2000 ? '_w1920.' : windowWidth > 1300 ? '_w1152.' :  '_w720.' ;
+        var galleryImgInfix = windowWidth > 2000 ? '_w1920.' : windowWidth > 1000 ? '_w1152.' :  '_w720.' ;
         this.setState({
             visibleProjects: this.state.projects.slice(0, projectsCount),
             hiddenProjects: this.state.projects.slice(projectsCount),
