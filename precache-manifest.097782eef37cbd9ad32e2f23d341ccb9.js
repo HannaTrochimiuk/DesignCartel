@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "39c75e8f0fb3b91fc3300145882a7373",
-    "url": "/DesignCartel/static/media/people.39c75e8f.svg"
+    "revision": "f015950715b42d18f7c61f79c1cd6df7",
+    "url": "/DesignCartel/static/media/recycle.f0159507.png"
   },
   {
-    "revision": "8527dfd3592aa5c9ae44",
-    "url": "/DesignCartel/static/css/main.a131f2a4.chunk.css"
+    "revision": "8f544b96d96409fd11d0",
+    "url": "/DesignCartel/static/css/main.d0e00515.chunk.css"
   },
   {
     "revision": "76acbd671c5701ab6b80",
     "url": "/DesignCartel/static/js/runtime~main.d8acad37.js"
   },
   {
-    "revision": "0bcb34172e7a35d9bbf8",
-    "url": "/DesignCartel/static/js/2.42b91bb3.chunk.js"
+    "revision": "e3a472d0a32e325a0d78",
+    "url": "/DesignCartel/static/js/2.7131a62f.chunk.js"
   },
   {
     "revision": "895980ed35fc73bda74dca3ed0805cc9",
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/design.0aafee99.svg"
   },
   {
-    "revision": "8527dfd3592aa5c9ae44",
-    "url": "/DesignCartel/static/js/main.a6f08da3.chunk.js"
+    "revision": "39c75e8f0fb3b91fc3300145882a7373",
+    "url": "/DesignCartel/static/media/people.39c75e8f.svg"
   },
   {
-    "revision": "f015950715b42d18f7c61f79c1cd6df7",
-    "url": "/DesignCartel/static/media/recycle.f0159507.png"
+    "revision": "8f544b96d96409fd11d0",
+    "url": "/DesignCartel/static/js/main.47f146ea.chunk.js"
   },
   {
     "revision": "e78b5693c4a0566d67a622f154754eca",
@@ -64,6 +64,10 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/słońce.b2a4b1c9.png"
   },
   {
+    "revision": "bbefdfd59b310735d11f186b56a7ca7c",
+    "url": "/DesignCartel/static/media/hoof_logo.bbefdfd5.svg"
+  },
+  {
     "revision": "1c40544394f634a4178a4cac573a85ba",
     "url": "/DesignCartel/static/media/logoSqr.1c405443.jpg"
   },
@@ -76,7 +80,11 @@ self.__precacheManifest = [
     "url": "/DesignCartel/static/media/header.4740d0bd.jpg"
   },
   {
-    "revision": "105c23a07e798bc912508cf84f03180a",
+    "revision": "e347c704f751b73226a98f8a39244bff",
+    "url": "/DesignCartel/static/media/header_bw.e347c704.jpg"
+  },
+  {
+    "revision": "84258f102748ea85990d81acca9b52f5",
     "url": "/DesignCartel/index.html"
   }
 ];
