@@ -7,10 +7,6 @@
   position: relative;
   transition: all 0.2s;
   background-image: url("../img/header_bw.jpg");
-  &:hover{
-    background-image: url("../img/header.jpg");
-
-  }
 } 
 
 .header__text-box {
